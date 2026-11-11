@@ -1299,7 +1299,7 @@ window.ENZ.imageUse = {
       return '<div class="page-head"><div class="wrap"><span class="label">About</span><h1 tabindex="-1">Written by a newcomer, for newcomers</h1></div></div>' +
         '<section class="section"><div class="wrap"><div class="prose">' + a.about.map(function (p) { return "<p>" + p + "</p>"; }).join("") +
         '<p>You can find me on <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">LinkedIn</a>.</p></div></div></section>' +
-        '<section class="section"><div class="wrap"><h2>Our approach</h2><div class="approach">' + a.approach.map(function (x) { return "<div><h3>" + x[0] + "</h3><p>" + x[1] + "</p></div>"; }).join("") + "</div></div></section>" +
+        '<section class="section"><div class="wrap"><h2>My approach</h2><div class="approach">' + a.approach.map(function (x) { return "<div><h3>" + x[0] + "</h3><p>" + x[1] + "</p></div>"; }).join("") + "</div></div></section>" +
         '<section class="section"><div class="wrap"><h2>Sources</h2><p class="lead">Every page lists its own sources. These are the ones the site relies on most.</p><div class="tiers">' +
         a.tiers.map(function (t) {
           return "<div><h3>" + t[0] + "</h3><p>" + t[1] + "</p><ul>" + t[2].map(function (s) { return "<li>" + (s[1] ? '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + "</a>" : s[0]) + "</li>"; }).join("") + "</ul></div>";
