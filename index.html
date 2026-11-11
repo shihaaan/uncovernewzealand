@@ -1,0 +1,1365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box}body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Uncover New Zealand</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<meta name="description" content="Uncover New Zealand. Discover the stories behind the land: a clear, friendly guide to the history, culture and places of Aotearoa, written by a newcomer for newcomers.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one calm reading column (max 1080px); a deep-water hero whose lower edge is a dawn horizon with a
+   long white cloud; the Start Here path drawn as a walking track with orange route markers.
+   Since the photographs were added, the hero is a shaded photo of Taranaki Maunga. */
+:root {
+  --bg: #F1F5F6;
+  --surface: #FFFFFF;
+  --ink: #10242B;
+  --muted: #50656D;
+  --line: #D2DDE1;
+  --moana: #0B4F5C;
+  --moana-soft: #DCEBEE;
+  --on-moana: #FFFFFF;
+  --marker: #E8590C;
+  --marker-ink: #A83C00;
+  --on-marker: #2B1200;
+  --fern: #2C6A3E;
+  --fern-soft: #E0EEE3;
+  --clay: #8C3B2A;
+  --clay-soft: #F4E5E0;
+  --hero-bg: #08323D;
+  --hero-ink: #F3FAFB;
+  --hero-muted: #B9D6DB;
+  --sky-low: #86BCC5;
+  --cloud: #FFFFFF;
+  --range-far: #0C4250;
+  --hero-shade: rgba(5, 38, 48, 0.90);
+  --hero-shade-mid: rgba(5, 38, 48, 0.74);
+  --hero-shade2: rgba(5, 38, 48, 0.38);
+  --hero-shade3: rgba(5, 38, 48, 0.74);
+  --era1: #8CA0A7;
+  --era2: #2C6A3E;
+  --era3: #0B4F5C;
+  --era4: #8C3B2A;
+  --era5: #B9831A;
+  --display: "Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B181D; --surface: #12242B; --ink: #E6EFF1; --muted: #9BB1B8; --line: #25393F;
+    --moana: #6DC6D2; --moana-soft: #14313A; --on-moana: #06262E;
+    --marker: #FF8A3D; --marker-ink: #FF9E5E; --on-marker: #2B1200;
+    --fern: #8FCB9B; --fern-soft: #16301F; --clay: #EBA797; --clay-soft: #3A211B;
+    --hero-bg: #0A2A33; --hero-ink: #EEF6F8; --hero-muted: #A9C6CC;
+    --sky-low: #2F6672; --cloud: #DCEAED; --range-far: #071E25;
+    --era1: #6F858C; --era2: #5FA873; --era3: #4FA9B6; --era4: #D98A77; --era5: #E0AE4A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B181D; --surface: #12242B; --ink: #E6EFF1; --muted: #9BB1B8; --line: #25393F;
+  --moana: #6DC6D2; --moana-soft: #14313A; --on-moana: #06262E;
+  --marker: #FF8A3D; --marker-ink: #FF9E5E; --on-marker: #2B1200;
+  --fern: #8FCB9B; --fern-soft: #16301F; --clay: #EBA797; --clay-soft: #3A211B;
+  --hero-bg: #0A2A33; --hero-ink: #EEF6F8; --hero-muted: #A9C6CC;
+  --sky-low: #2F6672; --cloud: #DCEAED; --range-far: #071E25;
+  --era1: #6F858C; --era2: #5FA873; --era3: #4FA9B6; --era4: #D98A77; --era5: #E0AE4A;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--moana); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--marker-ink); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; }
+h1:focus { outline: none; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+ul, ol { margin: 0; padding-left: 1.2em; }
+li + li { margin-top: 0.35em; }
+
+.wrap { max-width: 1080px; margin-inline: auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.prose { max-width: 66ch; display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+.prose > h2 { margin-top: 1rem; }
+.lead { font-size: 1.2rem; color: var(--muted); max-width: 60ch; }
+.label { font-family: var(--body); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.term { color: inherit; text-decoration: underline dotted; text-decoration-color: var(--moana); text-underline-offset: 3px; }
+.term:hover { color: var(--moana); }
+
+/* Header */
+.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9; background: var(--bg); border-bottom: 1px solid var(--line); }
+.site-head .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; column-gap: 1.5rem; row-gap: 0.25rem; padding-block: 0.7rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--display); font-weight: 700; font-size: 1.2rem; color: var(--ink); text-decoration: none; }
+.brand .logo { height: 32px; width: auto; flex: none; }
+.nav { display: flex; gap: 0.25rem; overflow-x: auto; max-width: 100%; min-width: 0; }
+.nav a { white-space: nowrap; padding: 0.4rem 0.7rem; border-radius: 999px; color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.98rem; }
+.nav a:hover { background: var(--moana-soft); }
+.nav a[aria-current="page"] { background: var(--moana); color: var(--on-moana); }
+
+/* Hero */
+.hero { background: linear-gradient(100deg, var(--hero-shade) 0%, var(--hero-shade-mid) 50%, var(--hero-shade2) 100%), url("assets/hero.jpg") center 46% / cover no-repeat, var(--hero-bg); color: var(--hero-ink); }
+.hero .wrap.top { padding-block: clamp(2.5rem, 7vw, 4.5rem); display: flex; flex-direction: column; gap: 1.25rem; }
+.hero h1 { font-size: clamp(2.3rem, 6.5vw, 4.25rem); max-width: 15ch; }
+.hero p { color: var(--hero-muted); font-size: 1.2rem; max-width: 52ch; }
+.hero .label { color: var(--hero-muted); }
+.hero p.credit { font-size: 0.8rem; margin-top: 0.5rem; }
+.hero .credit a { color: inherit; }
+@media (max-width: 700px) { .hero { background: linear-gradient(180deg, var(--hero-shade), var(--hero-shade3)), url("assets/hero.jpg") center / cover no-repeat, var(--hero-bg); } }
+
+/* Photographs */
+.shot { margin: 0; max-width: 46rem; }
+.shot.tall { max-width: 24rem; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 10px; background: var(--moana-soft); }
+.shot figcaption { margin-top: 0.45rem; font-size: 0.85rem; color: var(--muted); }
+.shot figcaption a { color: inherit; }
+.btns { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
+.btn { display: inline-block; padding: 0.7rem 1.2rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 2px solid transparent; }
+.btn-main { background: var(--marker); color: var(--on-marker); }
+.btn-ghost { border-color: var(--hero-muted); color: var(--hero-ink); }
+.btn-solid { background: var(--moana); color: var(--on-moana); }
+
+/* Sections */
+.section { padding-block: clamp(2rem, 5vw, 3.25rem); }
+.section + .section { border-top: 1px solid var(--line); }
+.section > .wrap { display: flex; flex-direction: column; gap: 1.25rem; }
+.page-head { padding-block: clamp(1.75rem, 4vw, 2.75rem) 0.5rem; }
+.page-head .wrap { display: flex; flex-direction: column; gap: 0.75rem; }
+.back { font-size: 0.95rem; font-weight: 500; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+.more { font-weight: 600; text-decoration: none; }
+.more:hover { text-decoration: underline; }
+
+/* Start Here panel on the home page */
+.startbox { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.5rem 3rem; align-items: center; }
+.startbox > div { display: flex; flex-direction: column; gap: 0.9rem; min-width: 0; align-items: flex-start; }
+.nextstop { display: flex; gap: 0.9rem; align-items: flex-start; padding: 1.1rem 1.25rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--ink); width: 100%; }
+.nextstop:hover { border-color: var(--marker); }
+.nextstop svg { width: 22px; height: 20px; flex: none; margin-top: 0.3rem; }
+.nextstop span { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.nextstop strong { font-family: var(--display); font-size: 1.2rem; line-height: 1.25; }
+
+/* The track: the Start Here path as a marked walking route */
+.track { list-style: none; margin: 0; padding: 0; position: relative; display: flex; flex-direction: column; max-width: 46rem; }
+.track::before { content: ""; position: absolute; left: 13px; top: 1.6rem; bottom: 1.6rem; border-left: 2px dashed var(--line); }
+.track li { margin: 0; position: relative; }
+.track a { display: grid; grid-template-columns: 28px minmax(0, 1fr); column-gap: 1rem; padding-block: 0.9rem; text-decoration: none; color: var(--ink); }
+.track .mk { display: flex; justify-content: center; padding-top: 0.2rem; background: var(--bg); align-self: start; padding-bottom: 0.2rem; }
+.track .mk svg { width: 24px; height: 22px; }
+.tri-line { fill: var(--bg); stroke: var(--marker); stroke-width: 2; stroke-linejoin: round; }
+.tri-fill { fill: var(--marker); stroke: var(--marker); stroke-width: 2; stroke-linejoin: round; }
+.track .tx { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.track .q { font-family: var(--display); font-weight: 700; font-size: 1.3rem; line-height: 1.2; }
+.track a:hover .q { color: var(--moana); text-decoration: underline; }
+.track .bl { color: var(--muted); font-size: 0.98rem; }
+.track .meta { font-size: 0.82rem; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+.track .meta b { color: var(--marker-ink); font-weight: 700; }
+.soon { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.35rem; color: var(--muted); }
+.soon li { margin: 0; }
+
+/* Question links */
+.qlist { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0 2.5rem; }
+.qlist li { margin: 0; border-bottom: 1px solid var(--line); }
+.qlist a { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; padding-block: 0.9rem; font-family: var(--display); font-weight: 700; font-size: 1.15rem; line-height: 1.25; color: var(--ink); text-decoration: none; }
+.qlist a:hover { color: var(--moana); }
+.qlist a span:last-child { color: var(--marker-ink); flex: none; }
+
+/* Timeline (to scale) */
+.tl { display: flex; flex-direction: column; gap: 0.35rem; }
+.tl-cap { font-size: 0.88rem; color: var(--muted); max-width: 66ch; }
+.tl-row { position: relative; height: 30px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.tl-seg { position: absolute; top: 0; bottom: 0; box-shadow: inset -2px 0 0 var(--bg); }
+.tl-ticks { position: relative; height: 1.6rem; font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tl-ticks span { position: absolute; top: 0.3rem; white-space: nowrap; transform: translateX(-50%); }
+.tl-ticks span.first { transform: none; }
+.tl-ticks span.last { transform: translateX(-100%); }
+@media (max-width: 640px) { .tl-ticks span.opt { display: none; } }
+.t1 { background: var(--era1); } .t2 { background: var(--era2); } .t3 { background: var(--era3); } .t4 { background: var(--era4); } .t5 { background: var(--era5); }
+
+.eras { list-style: none; padding: 0; display: flex; flex-direction: column; }
+.eras li { margin: 0; display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); column-gap: 2rem; padding-block: 1.25rem; border-top: 1px solid var(--line); }
+.eras .when { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.88rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.eras .when .n { display: flex; align-items: center; gap: 0.5rem; font-family: var(--display); font-size: 1.5rem; font-weight: 700; line-height: 1; }
+.eras .when .n i { width: 12px; height: 12px; border-radius: 2px; }
+.eras .what { display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
+.eras .what p { color: var(--muted); max-width: 62ch; }
+.eras .note { font-size: 0.85rem; color: var(--muted); }
+@media (max-width: 640px) { .eras li { grid-template-columns: minmax(0, 1fr); row-gap: 0.5rem; } .eras .when { flex-direction: row; align-items: baseline; gap: 0.75rem; } .eras .when .n { font-size: 1.2rem; } }
+
+/* Cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 1rem; }
+.card { display: flex; flex-direction: column; gap: 0.6rem; padding: 1.1rem 1.15rem 1.15rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; color: var(--ink); min-width: 0; }
+.card:hover { border-color: var(--moana); }
+.card p { color: var(--muted); font-size: 0.97rem; }
+.card .meta { margin-top: auto; padding-top: 0.4rem; font-size: 0.85rem; color: var(--muted); }
+.card.pic { padding: 0; gap: 0; overflow: hidden; }
+.card.pic img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; background: var(--moana-soft); }
+.card.pic .bd { display: flex; flex-direction: column; gap: 0.6rem; flex: 1; padding: 1rem 1.15rem 1.15rem; min-width: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.chip { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.15rem 0.55rem; border-radius: 999px; }
+.chip.heritage { background: var(--clay-soft); color: var(--clay); }
+.chip.nature { background: var(--fern-soft); color: var(--fern); }
+
+/* Article furniture */
+.short { max-width: 66ch; padding: 1.15rem 1.3rem; background: var(--moana-soft); border-radius: 10px; display: flex; flex-direction: column; gap: 0.4rem; }
+.short p { font-size: 1.1rem; }
+.why { max-width: 66ch; color: var(--muted); }
+.facts { display: grid; grid-template-columns: minmax(7rem, max-content) minmax(0, 1fr); gap: 0.5rem 1.25rem; margin: 0; padding: 1.1rem 1.25rem; background: var(--moana-soft); border-radius: 10px; max-width: 66ch; }
+.facts dt { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 0.2rem; }
+.facts dd { margin: 0; }
+@media (max-width: 480px) { .facts { grid-template-columns: 1fr; gap: 0.1rem; } .facts dd { margin-bottom: 0.6rem; } }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.25rem; padding-block: 1.1rem; border-block: 1px solid var(--line); max-width: 66ch; }
+.pair > div { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.pair .label.a { color: var(--marker-ink); }
+.pair .label.b { color: var(--moana); }
+.pair p { font-size: 0.98rem; }
+.words { max-width: 66ch; display: flex; flex-direction: column; gap: 0.75rem; }
+.words dl, .gloss { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0.75rem 2rem; margin: 0; }
+.words dl div, .gloss div { min-width: 0; }
+.words dt, .gloss dt { font-weight: 700; display: inline; }
+.words dd, .gloss dd { margin: 0; display: inline; color: var(--muted); }
+.gloss div { padding: 0.15rem 0.4rem; margin-inline: -0.4rem; border-radius: 6px; }
+.gloss div.hit { background: var(--moana-soft); }
+.links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pill { padding: 0.35rem 0.85rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
+.pill:hover { border-color: var(--moana); }
+.src { max-width: 66ch; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem; }
+.src ul { padding-left: 1.1em; }
+.src .rev { color: var(--muted); font-size: 0.85rem; }
+.onward { display: flex; flex-direction: column; gap: 0.75rem; max-width: 46rem; }
+.respect { max-width: 66ch; padding-left: 1rem; border-left: 3px solid var(--marker); }
+
+/* Glossary search */
+.find { display: flex; flex-direction: column; gap: 0.35rem; max-width: 26rem; }
+.find input { font: inherit; padding: 0.6rem 0.85rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); width: 100%; }
+
+.offlinks { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0.9rem 2rem; }
+.offlinks li { margin: 0; display: flex; flex-direction: column; min-width: 0; }
+.offlinks span { color: var(--muted); font-size: 0.95rem; }
+.approach { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.5rem 2.5rem; }
+.approach div { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.approach p { color: var(--muted); }
+.tiers { display: flex; flex-direction: column; gap: 1.5rem; }
+.tiers > div { display: flex; flex-direction: column; gap: 0.4rem; max-width: 66ch; }
+.tiers p { color: var(--muted); }
+
+.cta { background: var(--moana-soft); }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+footer .wrap { padding-block: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }
+@media (prefers-reduced-motion: no-preference) { .card, .nav a, .pill, .nextstop { transition: border-color 0.15s, background-color 0.15s; } }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#home"><img class="logo" src="assets/logo.svg" alt="" width="185" height="269">Uncover New Zealand</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-k="home">Home</a>
+      <a href="#start" data-k="start">Start Here</a>
+      <a href="#story" data-k="story">The Story</a>
+      <a href="#places" data-k="places">Places</a>
+      <a href="#glossary" data-k="glossary">Glossary</a>
+      <a href="#bearings" data-k="bearings">Your bearings</a>
+      <a href="#about" data-k="about">About</a>
+    </nav>
+  </div>
+</header>
+<main id="app"></main>
+<footer>
+  <div class="wrap">
+    <span>Uncover New Zealand. An independent, non-commercial guide by <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">Shihan</a>.</span>
+    <span>Version 1 · Last reviewed 2026 · <a href="#about">Sources and approach</a></span>
+  </div>
+</footer>
+
+<script>
+/* Uncover New Zealand: glossary. g: "reo" = te reo Māori, "kiwi" = New Zealand English. */
+window.ENZ = window.ENZ || {};
+window.ENZ.glossary = [
+  { t: "Aotearoa", g: "reo", d: "The Māori name now widely used for New Zealand, often translated as “land of the long white cloud”." },
+  { t: "aroha", g: "reo", d: "Love, compassion, empathy." },
+  { t: "awa", g: "reo", d: "River." },
+  { t: "haka", g: "reo", d: "A posture dance performed with chanted words. There are many kinds, for welcome, celebration, challenge and mourning." },
+  { t: "hāngī", g: "reo", d: "Food cooked in an earth oven over heated stones; also the oven itself." },
+  { t: "hapū", g: "reo", d: "A kinship group made up of related whānau. Traditionally the main political unit of Māori society." },
+  { t: "Hawaiki", g: "reo", d: "The ancestral homeland from which, in tradition, the ancestors of Māori voyaged." },
+  { t: "hui", g: "reo", d: "A gathering or meeting." },
+  { t: "iwi", g: "reo", d: "A tribe: a large group descended from a common ancestor, made up of related hapū." },
+  { t: "kai", g: "reo", d: "Food; to eat." },
+  { t: "kaitiaki", g: "reo", d: "A guardian or caretaker. Kaitiakitanga is guardianship, especially of the natural world." },
+  { t: "karakia", g: "reo", d: "A prayer or incantation, often said to open or close a gathering." },
+  { t: "kaumātua", g: "reo", d: "Elders; respected older people." },
+  { t: "kauri", g: "reo", d: "A giant native conifer of the northern North Island, among the largest and longest-lived trees in the world." },
+  { t: "kāwanatanga", g: "reo", d: "Governance or government. The word used in article one of te Tiriti o Waitangi." },
+  { t: "kia ora", g: "reo", d: "Hello; also thank you, or a general expression of goodwill. Literally “be well”." },
+  { t: "Kīngitanga", g: "reo", d: "The Māori King movement, founded in 1858 to unite iwi and hold on to land." },
+  { t: "kiwi", g: "reo", d: "A flightless, nocturnal native bird and a national symbol. With a capital K, a New Zealander." },
+  { t: "koha", g: "reo", d: "A gift or contribution, often given by visitors to their hosts." },
+  { t: "kōhanga reo", g: "reo", d: "“Language nest”: a preschool where children are immersed in te reo Māori." },
+  { t: "kōrero", g: "reo", d: "To speak; talk, conversation or story." },
+  { t: "kūmara", g: "reo", d: "Sweet potato, brought to New Zealand by the first Polynesian settlers." },
+  { t: "mana", g: "reo", d: "Authority, prestige and standing. People, places and objects can all hold mana." },
+  { t: "manaakitanga", g: "reo", d: "Hospitality, generosity and care for others." },
+  { t: "manuhiri", g: "reo", d: "Visitors or guests." },
+  { t: "marae", g: "reo", d: "The communal meeting place of a whānau, hapū or iwi: an open courtyard and the buildings around it." },
+  { t: "Matariki", g: "reo", d: "The star cluster also known as the Pleiades. Its midwinter rising marks the Māori new year." },
+  { t: "maunga", g: "reo", d: "Mountain." },
+  { t: "moana", g: "reo", d: "Sea or ocean." },
+  { t: "mōrena", g: "reo", d: "Good morning." },
+  { t: "pā", g: "reo", d: "A fortified village or defensive earthwork." },
+  { t: "Pākehā", g: "reo", d: "A New Zealander of European descent." },
+  { t: "pounamu", g: "reo", d: "Greenstone (nephrite jade), found in the South Island and highly prized." },
+  { t: "pōwhiri", g: "reo", d: "A formal welcome ceremony, usually held on a marae." },
+  { t: "rangatira", g: "reo", d: "A chief or leader." },
+  { t: "raupatu", g: "reo", d: "Confiscation: the taking of Māori land by the Crown after the wars of the 1860s." },
+  { t: "tamariki", g: "reo", d: "Children." },
+  { t: "tangata whenua", g: "reo", d: "“People of the land”: Māori as the indigenous people of New Zealand, or the people who belong to a particular place." },
+  { t: "taonga", g: "reo", d: "A treasure: anything highly valued, whether an object, a place, a language or an idea." },
+  { t: "tapu", g: "reo", d: "Sacred, set apart, under restriction." },
+  { t: "te ao Māori", g: "reo", d: "The Māori world." },
+  { t: "te reo Māori", g: "reo", d: "The Māori language, often shortened to “te reo”." },
+  { t: "te Tiriti o Waitangi", g: "reo", d: "The Treaty of Waitangi, especially its Māori-language text." },
+  { t: "tikanga", g: "reo", d: "Customs; the correct way of doing things. Tikanga differ between iwi." },
+  { t: "tino rangatiratanga", g: "reo", d: "Full chieftainship or self-determination. The phrase used in article two of te Tiriti o Waitangi." },
+  { t: "wāhi tapu", g: "reo", d: "A sacred place." },
+  { t: "waiata", g: "reo", d: "A song; to sing." },
+  { t: "waka", g: "reo", d: "A canoe. Also a group of iwi descended from the crew of one ancestral canoe." },
+  { t: "whakapapa", g: "reo", d: "Genealogy; the lines of descent that connect people to their ancestors and to each other." },
+  { t: "whānau", g: "reo", d: "Extended family." },
+  { t: "wharenui", g: "reo", d: "The meeting house on a marae." },
+  { t: "whenua", g: "reo", d: "Land." },
+
+  { t: "bach", g: "kiwi", d: "A holiday home, traditionally small and simple. Called a “crib” in the far south." },
+  { t: "bring a plate", g: "kiwi", d: "Bring a dish of food to share. An empty plate is not what your host means." },
+  { t: "the bush", g: "kiwi", d: "Native forest." },
+  { t: "chilly bin", g: "kiwi", d: "A portable cooler for food and drinks." },
+  { t: "dairy", g: "kiwi", d: "A small corner shop selling milk, bread, snacks and newspapers." },
+  { t: "gumboots", g: "kiwi", d: "Rubber boots." },
+  { t: "heaps", g: "kiwi", d: "A lot. “Thanks heaps” means thanks very much." },
+  { t: "jandals", g: "kiwi", d: "Flip-flops." },
+  { t: "kiwifruit", g: "kiwi", d: "The fruit. In New Zealand it is always “kiwifruit”, never just “kiwi”." },
+  { t: "long drop", g: "kiwi", d: "An outdoor pit toilet, common at huts and campsites." },
+  { t: "she’ll be right", g: "kiwi", d: "It will be fine; don’t worry about it." },
+  { t: "smoko", g: "kiwi", d: "A short break from work, usually for tea or coffee." },
+  { t: "sweet as", g: "kiwi", d: "Great; no problem. The sentence really does end there." },
+  { t: "ta", g: "kiwi", d: "Thanks." },
+  { t: "tiki tour", g: "kiwi", d: "The long, scenic way round." },
+  { t: "togs", g: "kiwi", d: "A swimsuit." },
+  { t: "tramping", g: "kiwi", d: "Hiking, especially on overnight trips." },
+  { t: "wop-wops", g: "kiwi", d: "Remote countryside; the middle of nowhere." },
+  { t: "yeah, nah", g: "kiwi", d: "A softened “no”. The last word is the one that counts." }
+];
+</script>
+<script>
+/* Uncover New Zealand: Start Here explainers 1 to 5.
+   [[term]] or [[term|shown text]] links a word to the glossary. */
+window.ENZ = window.ENZ || {};
+window.ENZ.explainers = (window.ENZ.explainers || []).concat([
+  {
+    id: "q-two-names", n: 1, mins: 3,
+    q: "Why does New Zealand have two names?",
+    blurb: "One name came from Dutch mapmakers, the other from the first people here. Both are in daily use.",
+    short: "“New Zealand” comes from Dutch mapmakers, who named the land Nova Zeelandia after the Dutch province of Zeeland in the 1640s. “Aotearoa” is the Māori name, usually translated as “land of the long white cloud”. Both are in everyday use, and you will often see them together as Aotearoa New Zealand.",
+    why: "You will meet both names in your first week: in the national anthem, on official documents, in the news and in ordinary conversation. Knowing where each one comes from makes the country’s two founding cultures easier to see.",
+    sections: [
+      ["The Dutch name", [
+        "In 1642 the Dutch explorer Abel Tasman became the first European known to sight these islands. He saw only part of the western coast, never set foot on land, and called the place Staten Landt, guessing it might be joined to a land of that name near South America.",
+        "That guess was soon shown to be wrong. On a world map of 1646 Joan Blaeu, mapmaker to the Dutch East India Company, gave the coastline the Latin name Nova Zeelandia. In Dutch that is Nieuw Zeeland, after Zeeland, a low-lying coastal province of the Netherlands. In English it became New Zealand.",
+        "So the “old” Zealand is in the Netherlands. It is not the Danish island of Zealand, which is a common mix-up."
+      ]],
+      ["The Māori name", [
+        "[[Aotearoa]] is usually translated as “land of the long white cloud”. In one widely told tradition the name comes from the voyage of the navigator Kupe: a long cloud lying on the horizon was the first sign of land.",
+        "Before Europeans arrived there was no need for one name covering the whole country. People identified with their own [[iwi]] and region, and the main islands had their own names: Te Ika-a-Māui (the fish of Māui) for the North Island and Te Waipounamu (the waters of greenstone) for the South Island. Aotearoa came into wide use as a name for the whole country from the late 1800s."
+      ]],
+      ["Two names on the map", [
+        "The same pattern repeats across the country. Many places carry both a Māori and an English name, such as Aoraki / Mount Cook, the highest mountain. Dual names like this are often agreed as part of settlements between [[iwi]] and the government.",
+        "In 2013 the two main islands were given official names in both languages: North Island or Te Ika-a-Māui, and South Island or Te Waipounamu."
+      ]],
+      ["Which one should you use?", [
+        "Either. Both are understood everywhere, and “Aotearoa New Zealand” is common in formal writing. The country’s official name is New Zealand, and whether Aotearoa should have official standing too is something New Zealanders debate from time to time.",
+        "If you would like to say it well: ah-oh-teh-ah-raw-ah, with each vowel sounded."
+      ]]
+    ],
+    pair: {
+      a: ["Tradition", "The name is linked to the voyage of Kupe, when a long white cloud on the horizon showed that land was near. Details differ between iwi."],
+      b: ["The written record", "Written sources show Aotearoa becoming the common name for the whole country from the late 1800s. Before that, each island and region had its own names."]
+    },
+    see: [],
+    sources: [
+      ["Te Ara: Place names", "https://teara.govt.nz/en/place-names/1"],
+      ["Te Aka Māori Dictionary", "https://maoridictionary.co.nz"],
+      ["Te Ara: First peoples in Māori tradition", "https://teara.govt.nz/en/first-peoples-in-maori-tradition/page-1"]
+    ]
+  },
+
+  {
+    id: "q-first-people", n: 2, mins: 3,
+    q: "Who were the first people to arrive?",
+    blurb: "Polynesian voyagers crossed thousands of kilometres of open ocean and settled the last large land on Earth.",
+    short: "The first people to settle New Zealand were Polynesians who sailed here from East Polynesia in voyaging canoes around 1250 to 1300 CE. Their descendants are Māori. New Zealand was one of the last large landmasses on Earth to be settled by people.",
+    why: "It is easy to assume a country’s history starts when written records do. Here, the human story is short by world standards, about 750 years, and it begins with one of the great feats of navigation.",
+    sections: [
+      ["The greatest voyagers of their time", [
+        "People began moving east into the Pacific from the Solomon Islands about 3,000 years ago. Over many generations their descendants settled island after island across an ocean that covers a third of the planet.",
+        "They did it without instruments. Navigators read the stars, the direction of ocean swells, the flight of birds and the shape of clouds over distant land. New Zealand, far to the south and a long way from anywhere, was among the last places they reached."
+      ]],
+      ["A new kind of land", [
+        "The settlers arrived in large [[waka]] from East Polynesia, bringing plants such as [[kūmara]], along with dogs and rats. What they found was unlike the tropical islands they had left: far bigger, much colder, and home to giant flightless birds called moa.",
+        "Archaeologists date the arrival mainly by radiocarbon dating of bones and wood. Traces of fires, hunted animals and the remains of the rats that came on the canoes all point to the same period, around 1250 to 1300 CE. An older claim that people were here more than a thousand years earlier, based on some rat bones, is now thought by most scientists to be wrong."
+      ]],
+      ["What tradition says", [
+        "Māori traditions tell of ancestors who came from a homeland called [[Hawaiki]]. Many [[iwi]] name Kupe as the first navigator to reach these islands. The Hokianga harbour in Northland is known in full as Te Hokianga-nui-a-Kupe, the great returning place of Kupe.",
+        "Many iwi also trace their descent from a particular voyaging canoe, such as Tainui, Te Arawa or Mātaatua. These traditions are not one single story. They differ from iwi to iwi, and each is held as part of that people’s identity."
+      ]],
+      ["Two myths you may hear", [
+        "The first is the “Great Fleet”: the idea that seven canoes all arrived together in 1350. That neat version was pieced together by European writers in the 1800s. The canoe traditions are real and important, but historians no longer accept the single-fleet story.",
+        "The second is that a different people, the Moriori, lived here before Māori and were driven out. This is false. Moriori are the indigenous people of Rēkohu, the Chatham Islands, and they descend from the same Polynesian ancestors as Māori."
+      ]]
+    ],
+    pair: {
+      a: ["Tradition", "Ancestors sailed from Hawaiki. Many iwi name Kupe as the first to arrive and trace their descent from named voyaging canoes."],
+      b: ["Evidence", "Radiocarbon dating, traces of forest fires and animal remains place the first settlement at around 1250 to 1300 CE, by people from East Polynesia."]
+    },
+    see: ["place-waipoua"],
+    sources: [
+      ["Te Ara: When was New Zealand first settled?", "https://teara.govt.nz/en/when-was-new-zealand-first-settled"],
+      ["NZHistory: Polynesian voyaging", "https://nzhistory.govt.nz/culture/encounters/polynesian-voyaging"],
+      ["Te Ara: First peoples in Māori tradition", "https://teara.govt.nz/en/first-peoples-in-maori-tradition/page-1"]
+    ]
+  },
+
+  {
+    id: "q-maori", n: 3, mins: 3,
+    q: "Who are Māori?",
+    blurb: "The indigenous people of New Zealand, and not one group but many.",
+    short: "Māori are the tangata whenua, the indigenous people of New Zealand, descended from the Polynesian voyagers who settled these islands. Māori are not a single group. They belong to many iwi and hapū, each with its own history, lands and traditions.",
+    why: "Māori culture is part of daily life here: in place names, greetings, ceremonies, sport and the news. Understanding the basics helps almost everything else about the country make sense.",
+    sections: [
+      ["A name that came later", [
+        "The word māori means normal or ordinary. It only became the name of a people after Europeans arrived, as a way of telling the people of the land apart from the newcomers. Before that, people identified themselves by family and tribe.",
+        "That is still true. Ask someone where they are from, and a Māori person may well answer with the name of their [[iwi]]."
+      ]],
+      ["Whānau, hapū, iwi", [
+        "Māori society is built in layers of kinship. The [[whānau]] is the extended family: elders, parents, children and grandchildren. Related whānau form a [[hapū]], which may have several hundred members and was traditionally the group that held and defended land. Related hapū make up an [[iwi]], the largest group.",
+        "What holds it together is [[whakapapa]], the lines of descent linking people to a founding ancestor and to each other. Ngāpuhi, the large iwi of Northland, means “the people of Puhi”. Some iwi trace their beginnings to the [[waka]] that carried their ancestors here: the Waikato tribes, for example, descend from the Tainui canoe."
+      ]],
+      ["People of the land", [
+        "[[tangata whenua|Tangata whenua]] means people of the land, and the connection is meant literally. When Māori introduce themselves formally, they often name their [[maunga]] (mountain) and [[awa]] (river) before their own name. Identity starts with place.",
+        "The centre of community life is the [[marae]], the meeting ground of a whānau, hapū or iwi, where people gather to welcome visitors, celebrate, debate and farewell the dead."
+      ]],
+      ["Many peoples, not one", [
+        "Each iwi has its own history, dialect and [[tikanga]] (customs). A story or practice that belongs to one iwi may be told differently, or not at all, by another. On this site, where a story belongs to a particular iwi, we say so.",
+        "The 1800s brought land sales, war and confiscation, which scattered many communities. In the mid 1900s large numbers of Māori moved from the country to the cities. Since then iwi organisations have worked to reconnect people with their language, their marae and their land."
+      ]],
+      ["Māori today", [
+        "Māori live in every town and city and work in every field. Some speak [[te reo Māori]] fluently and are closely tied to their marae. Others are finding their way back to connections their families lost. There is no single way of being Māori."
+      ]]
+    ],
+    see: ["place-waitangi", "place-waipoua"],
+    sources: [
+      ["Te Ara: Tribal organisation", "https://teara.govt.nz/en/tribal-organisation"],
+      ["Te Ara: First peoples in Māori tradition", "https://teara.govt.nz/en/first-peoples-in-maori-tradition/page-1"],
+      ["Te Aka Māori Dictionary", "https://maoridictionary.co.nz"]
+    ]
+  },
+
+  {
+    id: "q-treaty", n: 4, mins: 4,
+    q: "What is the Treaty of Waitangi, and why does it still matter?",
+    blurb: "The agreement of 1840 that founded the country, and the two texts that say different things.",
+    short: "The Treaty of Waitangi, te Tiriti o Waitangi, is an agreement first signed on 6 February 1840 between the British Crown and Māori rangatira (chiefs). It is regarded as New Zealand’s founding document. Its English and Māori texts say different things about who holds authority, and the country is still working through that difference.",
+    why: "The Treaty comes up constantly: in the news, in law, at work and on a public holiday every February. You do not need to be an expert, but knowing what was signed, and why people read it differently, will help you follow the conversation.",
+    sections: [
+      ["What happened at Waitangi", [
+        "By the late 1830s a growing number of British settlers and traders were living in New Zealand, largely beyond the reach of any law. Britain sent a naval officer, William Hobson, to negotiate with Māori for British authority.",
+        "The text was drawn up in a few days by Hobson, his secretary James Freeman and James Busby, the British Resident. The missionary Henry Williams and his son Edward translated it into [[te reo Māori]] in a single evening.",
+        "On 5 February 1840 it was put to around 500 Māori at Waitangi in the Bay of Islands, and debated all day. The next day, 6 February, more than 40 [[rangatira]] signed. Copies were then carried around the country. In the end more than 500 rangatira signed, including at least 13 women.",
+        "Not everyone agreed. Some rangatira refused to sign, and others were never asked. In May 1840 Hobson proclaimed British sovereignty over the whole country."
+      ]],
+      ["Two texts, two meanings", [
+        "Nearly everyone signed the Māori text. Only 39 rangatira signed a copy in English. That matters, because the two versions do not say the same thing.",
+        "In the first article, the English text has Māori giving the Queen “all the rights and powers of sovereignty”. The Māori text gives her [[kāwanatanga]], meaning governance.",
+        "In the second article, the English text guarantees Māori possession of their lands, forests and fisheries, and gives the Crown the sole right to buy land from them. The Māori text promises [[tino rangatiratanga]], full chieftainship, over their lands, villages and [[taonga]] (treasures).",
+        "The third article gives Māori the Queen’s protection and the rights of British subjects. Here the two texts match closely."
+      ]],
+      ["What happened next", [
+        "In the decades that followed, governments acted on the English text. Land was bought, often unfairly, and after the wars of the 1860s large areas were confiscated. For about a century the Treaty had little standing in the courts or in government.",
+        "Māori never stopped pointing to it. Through petitions, delegations, court cases and protest, generation after generation asked the Crown to honour what had been promised."
+      ]],
+      ["Why it still matters", [
+        "In 1975 Parliament set up the Waitangi Tribunal, a permanent commission of inquiry that hears Māori claims that the Crown has breached the Treaty. At first it could look only at new grievances. From 1985 it could examine events back to 1840.",
+        "Since then many [[iwi]] have negotiated settlements with the Crown. A settlement usually includes a formal apology, an agreed account of what happened, and some financial and cultural redress. Settlements are still being worked through.",
+        "The Treaty is also mentioned in many laws. What it should mean for how the country is run today is a live question, and New Zealanders hold a wide range of views about it."
+      ]],
+      ["Where to see it", [
+        "The Treaty documents are held in Wellington and are on public display at the National Library. The place where it was first signed is now the Waitangi Treaty Grounds."
+      ]]
+    ],
+    pair: {
+      a: ["In the English text", "Māori give the Queen sovereignty, and are guaranteed possession of their lands, forests and fisheries."],
+      b: ["In the Māori text", "Māori give the Queen kāwanatanga (governance), and keep tino rangatiratanga (full chieftainship) over their lands, villages and taonga."]
+    },
+    see: ["place-waitangi", "place-bay-of-islands"],
+    sources: [
+      ["Te Ara: Treaty of Waitangi", "https://teara.govt.nz/en/treaty-of-waitangi"],
+      ["NZHistory: Differences between the texts", "https://nzhistory.govt.nz/politics/treaty/read-the-treaty/differences-between-the-texts"],
+      ["Waitangi Tribunal", "https://www.waitangitribunal.govt.nz"],
+      ["Heritage New Zealand: Waitangi Treaty Grounds", "https://www.heritage.org.nz/list-details/6/Listing"]
+    ]
+  },
+
+  {
+    id: "q-nz-wars", n: 5, mins: 3,
+    q: "What were the New Zealand Wars?",
+    blurb: "The conflicts of 1845 to 1872 over land and authority, and the confiscations that followed.",
+    short: "The New Zealand Wars were a series of conflicts fought between 1845 and 1872, mostly in the North Island, between government forces and Māori defending their land and authority. Several thousand people died, most of them Māori. Afterwards the government confiscated huge areas of Māori land, and the effects are still felt.",
+    why: "You can live here for years without hearing much about these wars, yet they shaped who owns the land, where towns grew and what Treaty settlements are trying to repair.",
+    sections: [
+      ["Why fighting broke out", [
+        "The Treaty of 1840 left two questions unsettled on the ground: who was really in charge, and who controlled the land. The European population grew fast and wanted land to farm. Many Māori became less and less willing to sell.",
+        "In 1858 a number of [[iwi]] chose a Māori king. The [[Kīngitanga]], or King movement, was meant to unite tribes and stop further loss of land. The government saw it as a challenge to its authority."
+      ]],
+      ["Where and when", [
+        "The first fighting was the Northern War of 1845 to 1846, around the Bay of Islands. Smaller conflicts followed near Wellington in 1846 and Whanganui in 1847.",
+        "War returned in Taranaki in 1860. The largest campaign came in 1863 and 1864, when government troops invaded the Waikato, the heartland of the Kīngitanga, and fighting spread to Tauranga. The last phase, from 1868 to 1872, saw the leaders Tītokowaru and Te Kooti fight campaigns across the central and western North Island."
+      ]],
+      ["Not simply two sides", [
+        "These were not wars of all Māori against all [[Pākehā]]. Some iwi and [[hapū]] fought alongside the government for reasons of their own, including old rivalries. Many others stayed out of the fighting altogether."
+      ]],
+      ["Engineers of defence", [
+        "Māori forces were usually outnumbered and outgunned. They answered with engineering. A [[pā]] of this period was built with trenches, covered shelters and heavy timber walls designed to absorb artillery fire. Ruapekapeka in Northland is the best-preserved example."
+      ]],
+      ["Confiscation", [
+        "From 1863, laws allowed the government to take land from tribes it judged to be in rebellion. This is known as [[raupatu]]. More than a million hectares were confiscated in the Waikato, Taranaki, the Bay of Plenty and elsewhere, including land belonging to people who had not fought.",
+        "Even after the fighting ended, resistance continued. At Parihaka in Taranaki, a community led by Te Whiti o Rongomai and Tohu Kākahi opposed land confiscation peacefully. In 1881 government forces occupied the village and arrested its leaders."
+      ]],
+      ["Remembering", [
+        "For much of the 1900s these wars were barely taught or talked about. That has changed. Many confiscations have been addressed in Treaty settlements, battle sites are being cared for, and the wars are now remembered each year on 28 October."
+      ]]
+    ],
+    see: ["place-ruapekapeka", "place-bay-of-islands"],
+    sources: [
+      ["NZHistory: New Zealand’s 19th-century wars", "https://nzhistory.govt.nz/war/new-zealands-19th-century-wars/introduction"],
+      ["Te Ara: New Zealand wars", "https://teara.govt.nz/en/new-zealand-wars"],
+      ["Department of Conservation: Ruapekapeka Pā", "https://doc.govt.nz/ruapekapeka-pa"]
+    ]
+  }
+]);
+</script>
+<script>
+/* Uncover New Zealand: Start Here explainers 6 to 10. */
+window.ENZ = window.ENZ || {};
+window.ENZ.explainers = (window.ENZ.explainers || []).concat([
+  {
+    id: "q-people-today", n: 6, mins: 3,
+    q: "Who makes up New Zealand today?",
+    blurb: "A country where everyone’s family arrived from somewhere else, within the last 750 years.",
+    short: "New Zealand is a country of arrivals. Māori came first, about 750 years ago. British and Irish settlers followed from the 1800s, then people from the Pacific Islands, Asia and almost everywhere else. Nobody’s ancestors have been here longer than a few dozen generations.",
+    why: "If you have moved here, you are the latest chapter of a long story. Migration is not a side note in New Zealand’s history. It is the history.",
+    sections: [
+      ["Tangata whenua", [
+        "Māori are the [[tangata whenua]], the people of the land, and their arrival from East Polynesia began the human story of these islands. Every later arrival came to a country that was already someone’s home."
+      ]],
+      ["Settlers from Britain and Ireland", [
+        "Organised European settlement began around 1840. For the next hundred years most migrants came from England, Scotland and Ireland, many on government-assisted passages. Their descendants are often called [[Pākehā]].",
+        "They brought the English language, the legal system and Parliament, along with sheep, rugby and a taste for tea. They also left marks that vary by region: Dunedin was founded by Scots, and Christchurch was planned as an English church settlement."
+      ]],
+      ["Gold, gum and new communities", [
+        "The gold rushes of the 1860s drew people from Australia, Europe and China. Chinese miners were first invited to the Otago goldfields, then met with hostility. From 1881 Chinese arrivals alone had to pay a poll tax. The government formally apologised for it in 2002.",
+        "Other groups put down roots too. Dalmatians from the Adriatic coast worked the kauri gumfields of Northland. Scandinavians cleared forest in the lower North Island. Indian migrants, mainly from Gujarat and Punjab, began arriving in the late 1800s. After the Second World War came refugees from Europe and a wave of Dutch settlers."
+      ]],
+      ["The Pacific", [
+        "From the 1950s to the 1970s many people came from Samoa, Tonga, Fiji and other Pacific Islands to work in a growing economy. People from the Cook Islands, Niue and Tokelau are New Zealand citizens, a result of long-standing ties.",
+        "In the 1970s police raids on the homes of Pacific people suspected of overstaying their visas, known as the Dawn Raids, left deep hurt. The government formally apologised in 2021. Pacific communities are now a central part of New Zealand life, and Auckland is often described as the largest Polynesian city in the world."
+      ]],
+      ["A wider welcome", [
+        "Until the 1980s immigration rules favoured people from Britain and a few other countries. A law change in 1987 shifted the focus to skills rather than country of origin. Since then people have arrived from across Asia, Africa, the Middle East and the Americas, along with refugees from many conflicts."
+      ]],
+      ["Words you will hear", [
+        "[[Pākehā]] means a New Zealander of European descent. Pasifika is a common term for people of Pacific Island heritage. Tauiwi means non-Māori, and is sometimes used for newer arrivals. None of these are insults, though people have their own preferences about which they use."
+      ]]
+    ],
+    see: [],
+    sources: [
+      ["Te Ara: History of immigration", "https://teara.govt.nz/en/history-of-immigration"],
+      ["Te Ara: When was New Zealand first settled?", "https://teara.govt.nz/en/when-was-new-zealand-first-settled"],
+      ["Te Aka Māori Dictionary", "https://maoridictionary.co.nz"]
+    ]
+  },
+
+  {
+    id: "q-kia-ora", n: 7, mins: 3,
+    q: "Why do New Zealanders say “kia ora”?",
+    blurb: "A greeting from te reo Māori, a language that was nearly lost and then brought back.",
+    short: "“Kia ora” is a greeting in te reo Māori, the Māori language. It means “be well”, and it is used for hello, thank you and cheers. Te reo Māori has been an official language since 1987, and many of its words are part of everyday New Zealand English.",
+    why: "You will hear te reo on your first day: at the airport, on the radio, in emails from your bank. A handful of words, said with care, will make you feel at home faster than almost anything else.",
+    sections: [
+      ["Words you will hear on day one", [
+        "[[kia ora|Kia ora]] opens most conversations. [[mōrena|Mōrena]] is good morning. Your family is your [[whānau]], your work is your mahi, and food is [[kai]]. A meeting may be called a [[hui]], and it may open with a [[karakia]] and close with a [[waiata]]. Children are [[tamariki]]. To finish, people say ka kite: see you."
+      ]],
+      ["A language nearly lost", [
+        "For a long time te reo Māori was pushed out of public life. In schools it was discouraged, formally or informally, to speed up assimilation, and some older Māori still remember being punished for speaking it.",
+        "After the Second World War many Māori families moved from rural communities, where te reo was spoken, into towns and cities, where it was not. By the 1980s fewer than one in five Māori were native speakers. There was a real fear the language would die."
+      ]],
+      ["Bringing it back", [
+        "The revival was led by Māori. In 1972 three groups presented a petition to Parliament calling for the language to be promoted. A Māori language day followed that year and grew into Māori Language Week in 1975.",
+        "In 1978 the first officially bilingual school opened at Rūātoki. In 1982 the first [[kōhanga reo]], or language nest, opened in Lower Hutt, immersing preschool children in te reo. Hundreds more followed.",
+        "In the mid 1980s the Waitangi Tribunal heard a claim that te reo was a [[taonga]], a treasure, which the Crown had a duty to protect under the Treaty. The Tribunal agreed. In 1987 te reo Māori became an official language, and Māori-language schools, radio and television have grown since."
+      ]],
+      ["Saying it right", [
+        "Te reo spelling is regular, which makes it friendlier than English. The five vowels sound roughly like ah, eh, ee, aw and oo. A line over a vowel, called a macron, means the sound is held longer: the ā in Māori is a long “ah”.",
+        "Two letter pairs are worth knowing. “Wh” is usually said like an English f, so Whangārei begins with a soft “fah”. “Ng” is the sound in the middle of “singer”. Every syllable ends in a vowel.",
+        "You will not get every name right at first. Nobody minds. Trying is what people notice."
+      ]],
+      ["How many official languages?", [
+        "Two are set in law: te reo Māori, and New Zealand Sign Language, which was added in 2006. English, the most widely spoken language, is official by custom."
+      ]]
+    ],
+    see: [],
+    sources: [
+      ["NZHistory: History of the Māori language", "https://nzhistory.govt.nz/culture/maori-language-week/history-of-the-maori-language"],
+      ["Te Taura Whiri i te Reo Māori (Māori Language Commission)", "https://www.tetaurawhiri.govt.nz"],
+      ["Te Aka Māori Dictionary", "https://maoridictionary.co.nz"]
+    ]
+  },
+
+  {
+    id: "q-kiwis", n: 8, mins: 3,
+    q: "Why are New Zealanders called Kiwis?",
+    blurb: "A shy, flightless bird became a badge, then a nickname for a whole people.",
+    short: "New Zealanders are named after the kiwi, a flightless bird found nowhere else. It became a national symbol in the late 1800s, New Zealand soldiers were being called Kiwis by 1917, and the name stuck. It is friendly, not rude. People use it about themselves.",
+    why: "You will be offered “Kiwi hospitality”, hear about “Kiwi ingenuity” and, sooner or later, be called an honorary Kiwi. It helps to know there are three different things the word can mean.",
+    sections: [
+      ["The bird", [
+        "The [[kiwi]] is an odd and much-loved creature: flightless, active at night, with hair-like feathers and nostrils at the tip of a long beak. Most New Zealanders have never seen one in the wild.",
+        "To Māori the kiwi is a [[taonga]], and its feathers were woven into prized cloaks. Kiwi are threatened by introduced predators such as stoats and dogs, and a great deal of conservation work goes into protecting them."
+      ]],
+      ["From bird to badge", [
+        "Because it lives only here, the kiwi was an obvious emblem. It appeared on a postage stamp in 1898, and around that time it was already being described as the accepted national bird.",
+        "Soldiers picked it up next. A kiwi first appeared on a military badge in 1900, and newspaper cartoonists began drawing a kiwi to stand for New Zealand, especially after sporting wins."
+      ]],
+      ["From badge to people", [
+        "Before the First World War, New Zealanders overseas went by other names: En Zedders, Maorilanders, Fernleaves. During the war their soldiers were called Diggers or Pig Islanders, and by 1917 also Kiwis.",
+        "At the end of the war, soldiers waiting to go home carved a giant kiwi into the chalk hillside above Sling Camp on Salisbury Plain in England. A popular boot polish called Kiwi, made in Australia and named for its founder’s New Zealand-born wife, was used across the British forces at the same time. After the war the nickname spread from soldiers to everyone."
+      ]],
+      ["Three kinds of kiwi", [
+        "The bird is a kiwi. A person is a Kiwi, with a capital K. The fruit is a [[kiwifruit]], always the full word. It was known as the Chinese gooseberry until New Zealand growers renamed it for export in 1959. Ask for “a kiwi” at the supermarket and you may get a smile."
+      ]],
+      ["What does being Kiwi mean?", [
+        "People often point to informality, modesty, a love of the outdoors and a knack for fixing things with whatever is at hand. Treat these as habits some people share and not as rules. New Zealand is a varied country, and there are as many ways of being a Kiwi as there are Kiwis."
+      ]]
+    ],
+    see: ["place-waipoua"],
+    sources: [
+      ["Te Ara: Kiwi", "https://teara.govt.nz/en/kiwi"],
+      ["Department of Conservation", "https://www.doc.govt.nz"]
+    ]
+  },
+
+  {
+    id: "q-government", n: 9, mins: 3,
+    q: "How is New Zealand governed?",
+    blurb: "A monarch who stays out of politics, one house of Parliament and two votes each.",
+    short: "New Zealand is a parliamentary democracy and a constitutional monarchy. The British monarch is head of state, represented here by the Governor-General, but real power sits with an elected Parliament. Parliament has a single chamber and is elected at least every three years.",
+    why: "Whether you plan to vote, apply for residence or just follow the news, it helps to know who decides what. New Zealand’s system is simpler than most.",
+    sections: [
+      ["The Crown and the Governor-General", [
+        "The head of state is the King or Queen of New Zealand, who is also the British monarch. Day to day, the monarch is represented by the Governor-General, who signs laws and performs ceremonial duties. Both stay strictly out of party politics.",
+        "You will often hear the phrase “the Crown”. It means the government as a continuing institution. It is the word used for the government’s side of the Treaty of Waitangi."
+      ]],
+      ["One house of Parliament", [
+        "Parliament first met in 1854 and has sat in Wellington since 1865. Unlike many countries, New Zealand has no upper house: the second chamber was abolished in 1951. The House of Representatives normally has 120 members.",
+        "The party or group of parties that can command a majority in the House forms the government, led by the Prime Minister. Ministers have their offices in a round building in Wellington known to everyone as the Beehive."
+      ]],
+      ["Two votes: how MMP works", [
+        "Since 1996 elections have used a system called MMP, short for mixed member proportional. Each voter has two votes.",
+        "The party vote is for the party you want in Parliament. It decides each party’s overall share of the seats. The electorate vote is for the person you want to represent your local area.",
+        "Because seats are shared out in proportion to votes, one party rarely wins a majority alone. Coalitions and agreements between parties are normal."
+      ]],
+      ["Māori electorates", [
+        "Since 1868 there have been seats in Parliament elected by Māori voters. Today people of Māori descent choose whether to enrol on the Māori roll or the general roll."
+      ]],
+      ["Who can vote", [
+        "New Zealand was the first self-governing country to give women the vote, in 1893. It is also unusual in allowing permanent residents, and not only citizens, to vote in national elections. The Electoral Commission explains the current rules."
+      ]],
+      ["No single written constitution", [
+        "There is no one document called the constitution. The rules are spread across several laws, including the Constitution Act 1986 and the Bill of Rights Act 1990, together with the Treaty of Waitangi, court decisions and long-standing conventions."
+      ]],
+      ["Local councils", [
+        "Closer to home, city, district and regional councils look after things like local roads, water, rubbish collection, parks and libraries. They are elected separately, and they are funded partly by a property tax called rates."
+      ]]
+    ],
+    see: [],
+    sources: [
+      ["Electoral Commission: New Zealand’s system of government", "https://elections.nz/democracy-in-nz"],
+      ["NZHistory: A quick history of Parliament", "https://nzhistory.govt.nz/politics/history-of-parliament/quick-history"],
+      ["New Zealand Government: How government works", "https://www.govt.nz/browse/engaging-with-government/government-in-new-zealand"],
+      ["New Zealand Parliament", "https://www.parliament.nz"]
+    ]
+  },
+
+  {
+    id: "q-holidays", n: 10, mins: 3,
+    q: "What do New Zealand’s public holidays mean?",
+    blurb: "Three days off that explain the country: a treaty, a war and a rising of stars.",
+    short: "Three public holidays say the most about New Zealand. Waitangi Day, on 6 February, marks the signing of the Treaty of Waitangi. Anzac Day, on 25 April, remembers those who served in war. Matariki, on a Friday in midwinter, marks the Māori new year.",
+    why: "A day off means more when you know what it is for. These three also show how the country sees its past: with pride, with grief, and with some honest argument.",
+    sections: [
+      ["Waitangi Day, 6 February", [
+        "Waitangi Day marks the first signing of the Treaty of Waitangi in 1840. It has been a nationwide public holiday since 1974. The main ceremonies take place at Waitangi in the Bay of Islands.",
+        "It is a day with two moods. For many it is a summer day at the beach. It has also long been a day for protest and debate about whether the Treaty’s promises have been kept. Both are part of what the day is."
+      ]],
+      ["Anzac Day, 25 April", [
+        "Anzac Day falls on the anniversary of the landing of New Zealand and Australian troops at Gallipoli, in what is now Türkiye, in 1915. ANZAC stands for Australian and New Zealand Army Corps.",
+        "The day honours all New Zealanders who have served in wars overseas. Towns and cities hold services at their war memorials, the best attended at dawn, and many people wear a red paper poppy."
+      ]],
+      ["Matariki", [
+        "[[Matariki]] is the Māori name for the star cluster also called the Pleiades. Its return to the dawn sky in midwinter marks the start of the Māori new year. It is a time to remember those who have died, to gather and share food, and to plan for the year ahead.",
+        "Matariki became a public holiday in 2022. The date changes each year because it follows the Māori lunar calendar, but it always falls on a Friday in June or July. Some [[iwi]] mark the new year by a different star, Puanga."
+      ]],
+      ["The other days off", [
+        "New Year brings two days, 1 and 2 January. Good Friday and Easter Monday move with the Christian calendar. King’s Birthday is the first Monday in June, which is not the monarch’s actual birthday.",
+        "Labour Day, the fourth Monday in October, celebrates the campaign for an eight-hour working day. It has been a public holiday since 1899. Christmas Day and Boxing Day end the year, in the middle of summer.",
+        "Each region also has its own anniversary day, usually tied to the arrival of its first organised group of European settlers. That is why your friends in another city may have a Monday off when you do not."
+      ]],
+      ["Good to know", [
+        "When Waitangi Day or Anzac Day falls on a weekend, the day off moves to the following Monday. For exact dates each year, check the official list."
+      ]]
+    ],
+    see: ["place-waitangi"],
+    sources: [
+      ["Te Ara: Public holidays", "https://teara.govt.nz/en/public-holidays"],
+      ["Employment New Zealand (official public holiday dates)", "https://www.employment.govt.nz"],
+      ["Te Ara: Treaty of Waitangi", "https://teara.govt.nz/en/treaty-of-waitangi"]
+    ]
+  }
+]);
+</script>
+<script>
+/* Uncover New Zealand: The Story (eras) and Places. */
+window.ENZ = window.ENZ || {};
+
+/* start/end place each era on the to-scale timeline (1250 to 2000). */
+window.ENZ.eras = [
+  { id: "era-arrivals", n: 1, name: "The first arrivals", dates: "c. 1250 to 1300", start: 1250, end: 1300, tone: "t1",
+    summary: "Voyagers from East Polynesia reach the last large land on Earth and begin to settle it. Tradition and archaeology each tell part of the story.",
+    link: "q-first-people", linkLabel: "Read: Who were the first people to arrive?" },
+  { id: "era-te-ao-maori", n: 2, name: "Te ao Māori before European contact", dates: "c. 1300 to 1642", start: 1300, end: 1642, tone: "t2",
+    summary: "Over three centuries the settlers adapt to a cold, large country. They hunt the moa to extinction, develop gardening and fortified pā, and grow into the many iwi and hapū of the Māori world.",
+    link: "q-maori", linkLabel: "Read: Who are Māori?" },
+  { id: "era-encounters", n: 3, name: "Encounters and the Treaty", dates: "1642 to 1840", start: 1642, end: 1840, tone: "t3", full: true,
+    summary: "European ships appear, first rarely and then in numbers. Traders, whalers and missionaries follow, muskets upend the balance between iwi, and in 1840 the Treaty of Waitangi is signed." },
+  { id: "era-colonisation", n: 4, name: "Colonisation and the New Zealand Wars", dates: "1840 to 1900", start: 1840, end: 1900, tone: "t4",
+    summary: "Settlers arrive in their tens of thousands. War, confiscation and the land court move most land out of Māori hands. Gold is found in the south, and in 1893 women win the vote.",
+    link: "q-nz-wars", linkLabel: "Read: What were the New Zealand Wars?" },
+  { id: "era-modern", n: 5, name: "Becoming modern New Zealand", dates: "1900 to the 1990s", start: 1900, end: 2000, tone: "t5",
+    summary: "Two world wars, a gradual loosening of ties to Britain, the move of Māori to the cities, and from the 1970s a revival of Māori language and Treaty claims that reshapes the country.",
+    link: "q-people-today", linkLabel: "Read: Who makes up New Zealand today?" }
+];
+
+window.ENZ.eraPage = {
+  id: "era-encounters",
+  title: "Encounters and the Treaty",
+  dates: "1642 to 1840",
+  lead: "For two centuries after the first European ship appeared, Māori and newcomers met on Māori terms. This is the story of how that changed, and how a treaty came to be signed.",
+  facts: [
+    ["Dates", "1642 to 1840"],
+    ["Key people", "Abel Tasman, James Cook, Tupaia, Ruatara, Hongi Hika, Samuel Marsden, James Busby, William Hobson"],
+    ["Key events", "Tasman’s visit (1642); Cook’s first voyage (1769); first mission (1814); He Whakaputanga, the Declaration of Independence (1835); the Treaty of Waitangi (1840)"]
+  ],
+  sections: [
+    ["A ship on the horizon, 1642", [
+      "In December 1642 two Dutch ships under Abel Tasman anchored in a bay at the top of the South Island, now called Golden Bay or Mohua. The local people, Ngāti Tūmatakōkiri, came out in [[waka]]. The meeting turned violent and four of Tasman’s crew were killed.",
+      "Tasman sailed away without ever landing. He left a line on a map and a name, and no European returned for 127 years."
+    ]],
+    ["Cook and Tupaia, 1769", [
+      "The British navigator James Cook reached the east coast of the North Island in October 1769. The first meetings, at Tūranganui-a-Kiwa where Gisborne now stands, went badly, and several Māori were killed.",
+      "Cook had on board a Tahitian navigator and priest named Tupaia. To everyone’s surprise, Tupaia and Māori could understand each other, proof of their shared Polynesian origins. Cook went on to sail around both main islands and produced a remarkably accurate map."
+    ]],
+    ["Whalers, sealers and traders", [
+      "From the 1790s ships came for seals, whales, timber and flax. Māori were quick to trade, supplying potatoes, pork and labour in return for iron tools, cloth and, increasingly, guns. Many Māori joined ships’ crews and saw Sydney, and some travelled as far as London.",
+      "Kororāreka in the Bay of Islands, now Russell, grew into a busy and rowdy port. At this stage the newcomers were few, and they lived in a Māori world, dependent on the goodwill of local [[rangatira]]."
+    ]],
+    ["Missionaries and the written word", [
+      "In 1814 the Anglican missionary Samuel Marsden founded the first mission station in the Bay of Islands, under the protection of the rangatira Ruatara. A second followed at Kerikeri in 1819, protected by the Ngāpuhi leader Hongi Hika.",
+      "The missionaries worked with Māori to put [[te reo Māori]] into writing. Reading and writing spread quickly through Māori communities, often carried by Māori teachers well ahead of the missionaries themselves."
+    ]],
+    ["The Musket Wars", [
+      "Guns changed warfare between [[iwi]]. In the 1810s, 1820s and 1830s a series of campaigns known as the Musket Wars devastated some tribes and forced many others off their lands. Possibly tens of thousands of people died. The upheaval redrew the map of who lived where, shortly before large-scale European settlement began."
+    ]],
+    ["Towards a treaty", [
+      "By the 1830s Britain was being drawn in. Some British subjects were behaving lawlessly, land speculators were circling, and France was showing interest. In 1833 James Busby arrived as British Resident, a kind of consul, with no troops and no real power.",
+      "In 1834 northern rangatira chose a flag so that ships built in New Zealand could trade legally. On 28 October 1835, at Waitangi, 34 of them signed He Whakaputanga, the Declaration of Independence, which declared the authority of the United Tribes of New Zealand. By 1839 it had 52 signatures.",
+      "Four years later, with a private company about to ship settlers to Wellington, Britain sent William Hobson to negotiate for British authority. The result was the Treaty of Waitangi, first signed on 6 February 1840."
+    ]]
+  ],
+  see: ["place-waitangi", "place-bay-of-islands"],
+  related: ["q-treaty", "q-two-names"],
+  sources: [
+    ["Te Ara: He Whakaputanga, Declaration of Independence", "https://teara.govt.nz/en/he-whakaputanga-declaration-of-independence"],
+    ["NZHistory: He Whakaputanga", "https://nzhistory.govt.nz/media/interactive/he-whakaputanga-declaration-independence-1835"],
+    ["Te Ara: Place names", "https://teara.govt.nz/en/place-names/1"],
+    ["NZHistory: New Zealand’s 19th-century wars", "https://nzhistory.govt.nz/war/new-zealands-19th-century-wars/introduction"],
+    ["Te Ara: Treaty of Waitangi", "https://teara.govt.nz/en/treaty-of-waitangi"]
+  ]
+};
+
+window.ENZ.places = [
+  {
+    id: "place-waitangi", name: "Waitangi Treaty Grounds", maori: "", kind: "heritage", region: "Bay of Islands, Northland",
+    hook: "The lawn where the Treaty of Waitangi was first signed.",
+    card: "Where the Treaty was first signed in 1840, and where the country gathers every February.",
+    facts: [["Region", "Bay of Islands, Northland"], ["Linked era", "Encounters and the Treaty"], ["Type", "Heritage site"], ["Cared for by", "The Waitangi National Trust"]],
+    story: [
+      "In 1833 James Busby arrived as Britain’s official representative, the British Resident. His house, cut to size in Sydney and assembled here over 1833 and 1834, stood on a headland looking across the Bay of Islands.",
+      "Important things kept happening on its lawn. In 1834 northern [[rangatira]] chose the country’s first flag here. In 1835 they signed He Whakaputanga, the Declaration of Independence. On 5 February 1840 the Treaty was read and debated in front of the house, and on 6 February it was signed in a tent on the grass.",
+      "The property was later sold and fell into disrepair. In 1932 the Governor-General, Lord Bledisloe, and Lady Bledisloe bought it and gave it to the people of New Zealand. For the centenary in 1940 a carved meeting house, Te Whare Rūnanga, was opened beside the Treaty House, so that the two buildings would stand together."
+    ],
+    seeList: [
+      "The Treaty House, one of the oldest houses in the country, with rooms that explain how the Treaty was drafted.",
+      "The flagstaff, on the spot where the Treaty was signed. It flies three flags: the New Zealand flag, the Union Jack and the flag chosen by the rangatira in 1834.",
+      "Te Whare Rūnanga, the carved meeting house opened in 1940. Its carvings depict ancestors.",
+      "Ngātokimatawhaorua, a huge ceremonial [[waka]], which rests in its own shelter near the shore."
+    ],
+    basics: "Allow at least half a day. The grounds are open in every season, and the views over the bay are best in the morning. Waitangi Day, 6 February, is the busiest day of the year. Check the Treaty Grounds website for current opening hours and prices.",
+    respect: "Te Whare Rūnanga is a meeting house in use, not a museum piece. Follow the guidance of your hosts, and take your shoes off if you are asked to.",
+    eras: ["era-encounters"], related: ["q-treaty", "q-holidays"],
+    sources: [
+      ["Waitangi Treaty Grounds: Treaty House", "https://waitangi.org.nz/visit/treaty-house"],
+      ["Heritage New Zealand: Waitangi Treaty Grounds", "https://www.heritage.org.nz/list-details/6/Listing"],
+      ["Tohu Whenua: Waitangi Treaty Grounds", "https://tohuwhenua.nz/regions/te-tai-tokerau-northland/waitangi-treaty-grounds"],
+      ["Te Ara: He Whakaputanga, Declaration of Independence", "https://teara.govt.nz/en/he-whakaputanga-declaration-of-independence"]
+    ]
+  },
+  {
+    id: "place-bay-of-islands", name: "Russell and Kerikeri", maori: "Kororāreka", kind: "heritage", region: "Bay of Islands, Northland",
+    hook: "A whaling port and a mission station, home to the country’s oldest surviving buildings.",
+    card: "A rowdy whaling port and a quiet mission station, with the oldest buildings in the country.",
+    facts: [["Region", "Bay of Islands, Northland"], ["Linked eras", "Encounters and the Treaty; Colonisation and the New Zealand Wars"], ["Type", "Historic towns"], ["Good to know", "Russell’s Māori name is Kororāreka"]],
+    story: [
+      "Two small towns on the Bay of Islands show the two faces of early contact between Māori and Europeans.",
+      "Kororāreka, now Russell, was the trading port. From the early 1800s whaling ships called here for food, water and repairs, and Māori did brisk business supplying them. It had a reputation for drink and disorder. The first capital of the colony was set up nearby at Okiato in 1840, before the government moved to Auckland, and Kororāreka later took on the capital’s name, Russell.",
+      "Above the town stands the flagstaff on Maiki Hill. The Ngāpuhi leader Hōne Heke, who had been the first to sign the Treaty, came to see the British flag as a sign that the Treaty’s promises were not being kept. He had the flagstaff cut down four times. The last time, in March 1845, most of the town was burned, and the Northern War began.",
+      "Kerikeri was the mission. Anglican missionaries settled there in 1819 under the protection of the Ngāpuhi leader Hongi Hika, whose [[pā]], Kororipo, stood just across the inlet. Missionaries and Māori lived side by side, each with their own aims."
+    ],
+    seeList: [
+      "Christ Church in Russell, built in the 1830s and the oldest surviving church in the country.",
+      "Pompallier Mission in Russell, built of rammed earth in 1842 for the Catholic mission, where books in te reo Māori were printed.",
+      "The Mission House in Kerikeri, also called Kemp House, built in 1821 and 1822. It is the oldest surviving building in New Zealand.",
+      "The Stone Store beside it, built in the 1830s, the oldest stone building in the country.",
+      "Kororipo Pā, a short walk from the Stone Store, with views back across the basin."
+    ],
+    basics: "Russell is a short passenger-ferry ride from Paihia. Kerikeri is a drive to the north-west. Each needs a few hours, and the two together make a full day. Check Heritage New Zealand for opening times at the mission buildings.",
+    respect: "",
+    eras: ["era-encounters"], related: ["q-treaty", "q-nz-wars"],
+    sources: [
+      ["Heritage New Zealand: Kerikeri Mission House", "https://www.heritage.org.nz/the-list/details/2"],
+      ["Te Ara: Bay of Islands historic buildings (1966 encyclopaedia)", "https://teara.govt.nz/en/node/22806"],
+      ["Heritage New Zealand: places to visit", "https://www.visitheritage.co.nz"],
+      ["NZHistory: Ruapekapeka and the Northern War", "https://nzhistory.govt.nz/node/52069"]
+    ]
+  },
+  {
+    id: "place-ruapekapeka", name: "Ruapekapeka Pā", maori: "", kind: "heritage", region: "Northland",
+    hook: "The best-preserved battlefield of the New Zealand Wars, and a masterpiece of defensive engineering.",
+    card: "A hilltop fortress built to withstand cannon fire, and the last battle of the Northern War.",
+    facts: [["Region", "Northland, inland from the Bay of Islands"], ["Linked era", "Colonisation and the New Zealand Wars"], ["Type", "Battle site and historic reserve"], ["Name", "“The bat’s nest”"]],
+    story: [
+      "Ruapekapeka was the final battle of the Northern War of 1845 to 1846, fought between British forces with their Māori allies and the Ngāpuhi leaders Hōne Heke and Te Ruki Kawiti.",
+      "Kawiti chose a remote ridge and built a [[pā]] designed for a new kind of war. Its timber wall was made of whole pūriri trunks set deep in the ground. Behind it lay rifle pits and underground shelters roofed with timber and earth, where defenders could sit out an artillery barrage. The name means the bat’s nest.",
+      "The British spent weeks dragging heavy guns through the bush. The bombardment began on 10 January 1846. By the next morning part of the wall was broken, and troops and allied Māori under Tāmati Wāka Nene entered the pā to find that most of the defenders had already left.",
+      "Why it was nearly empty is still discussed. It may have been a trap, a way of covering the evacuation of the wounded, or a judgement that the pā had done its job. Soon afterwards Heke, Kawiti and Nene made peace, and the governor pardoned those who had fought."
+    ],
+    seeList: [
+      "The ditches and banks of the pā, still clear on the ground.",
+      "A cannon used by Kawiti’s defenders.",
+      "The earthworks of the British forward position on the facing slope, close enough to show how near the two sides were."
+    ],
+    basics: "Allow one to two hours. The site is off State Highway 1 between Whangārei and Kawakawa, at the end of a few kilometres of unsealed road. There are no shops, so bring water. The Department of Conservation page has current directions and conditions.",
+    respect: "This is a battlefield where people died. Do not eat or drink on the pā itself, and stay out of the pits and tunnels, which are fragile.",
+    eras: ["era-colonisation"], related: ["q-nz-wars"],
+    sources: [
+      ["Department of Conservation: Ruapekapeka Pā", "https://doc.govt.nz/ruapekapeka-pa"],
+      ["NZHistory: Ruapekapeka", "https://nzhistory.govt.nz/node/52069"],
+      ["NZHistory: New Zealand’s 19th-century wars", "https://nzhistory.govt.nz/war/new-zealands-19th-century-wars/introduction"]
+    ]
+  },
+  {
+    id: "place-waipoua", name: "Waipoua Forest and Tāne Mahuta", maori: "", kind: "nature", region: "Northland, west coast",
+    hook: "The largest living kauri tree, in the largest native forest left in Northland.",
+    card: "Stand in front of the largest living kauri, a tree older than the country’s human history.",
+    facts: [["Region", "West coast of Northland, north of Dargaville"], ["Type", "Native kauri forest"], ["Tangata whenua", "Te Roroa"], ["Tāne Mahuta", "51.2 m tall, with a trunk 13.77 m around"]],
+    story: [
+      "[[kauri|Kauri]] once covered much of the northern North Island. They are among the giants of the plant world: they can grow more than 50 metres tall and live for about 2,000 years.",
+      "From the 1800s kauri were felled on a huge scale for ship masts, houses and export, and the land was dug over for kauri gum, a fossil resin used in varnish. Only small pockets of old forest survived. Waipoua, with the forests beside it, is the largest tract of native forest remaining in Northland.",
+      "Its most famous tree is Tāne Mahuta, the largest kauri known to be alive. The name is often translated as Lord of the Forest. In Māori tradition Tāne is the son of Ranginui, the sky father, and Papatūānuku, the earth mother. He pushed his parents apart to let light into the world, and the trees are his children.",
+      "Te Roroa are the [[tangata whenua]] of Waipoua. People have lived in the valley for centuries and still do. Just to the north is the Hokianga harbour, where tradition says the navigator Kupe set out on his return to [[Hawaiki]]."
+    ],
+    seeList: [
+      "Tāne Mahuta, a few minutes’ walk from the road on a flat, accessible track.",
+      "Te Matua Ngahere, the Father of the Forest, a second giant with an even wider trunk, reached by a longer forest walk.",
+      "Native birdlife. North Island brown kiwi and the rare kōkako both live in the forest, though you are more likely to hear birds than see them."
+    ],
+    basics: "Allow an hour for Tāne Mahuta alone, or half a day with the longer walks. The forest road is winding and there are no shops or fuel in the forest. Tracks are sometimes closed or changed to protect the trees, so check the Department of Conservation page before you go.",
+    respect: "Kauri are under threat from a disease that travels in soil. Clean your shoes at the wash stations and stay on the track: kauri roots are shallow and easily damaged. The forest and its great trees are of deep significance to Te Roroa. Please do not touch the tree.",
+    eras: ["era-arrivals"], related: ["q-first-people", "q-kiwis"],
+    sources: [
+      ["Department of Conservation: Waipoua Forest", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/northland/places/waipoua-forest/"],
+      ["Department of Conservation: Tāne Mahuta Walk", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/northland/places/waipoua-forest/things-to-do/tane-mahuta-walk"]
+    ]
+  }
+];
+
+window.ENZ.placesNext = [
+  "Auckland’s volcanic cones (Tāmaki Makaurau)", "Rotorua and Whakarewarewa", "Wellington: Parliament, Te Papa and the National Library",
+  "Arrowtown and the Otago goldfields", "Tongariro National Park", "Lake Taupō and the volcanic plateau",
+  "Abel Tasman National Park", "Aoraki / Mount Cook", "Fiordland and Milford Sound (Piopiotahi)"
+];
+</script>
+<script>
+/* Uncover New Zealand: practical page, About, approach and sources. */
+window.ENZ = window.ENZ || {};
+
+window.ENZ.bearings = {
+  lead: "A few things that stay true whenever you arrive. Anything that changes, such as visa rules, prices and opening hours, is left to the official sites linked at the end.",
+  items: [
+    ["The seasons are upside down", [
+      "If you come from the Northern Hemisphere, the calendar flips. Summer runs roughly from December to February and winter from June to August. Christmas is a beach holiday, and the school year starts at the end of January.",
+      "The north is warmer than the south, the opposite of what many newcomers expect. The weather can change quickly anywhere, and “four seasons in one day” is a fair description of some of them."
+    ]],
+    ["The sun is stronger than it feels", [
+      "Ultraviolet light is intense here, even on cool or cloudy days. New Zealanders learn early to cover up, wear a hat and use sunscreen in the warmer months."
+    ]],
+    ["Distances take longer than the map suggests", [
+      "The country is long and narrow, about 1,600 kilometres from end to end, with few motorways. Most roads are single lane each way, and many are winding and hilly. Drive on the left, and plan on fewer kilometres per hour than you are used to.",
+      "The two main islands are joined by a ferry across Cook Strait, between Wellington and Picton."
+    ]],
+    ["The outdoors is wonderful and deserves respect", [
+      "Walking tracks, huts and campsites across the country are looked after by the Department of Conservation, known as DOC. Mountain weather turns fast, rivers rise quickly, and mobile coverage ends not far from the road. Check the forecast, tell someone your plans, and take warm clothing in every season.",
+      "On tracks you will see small orange triangles nailed to trees and posts. They mark the route. Follow them."
+    ]],
+    ["Protect what makes the place special", [
+      "New Zealand’s plants and animals evolved in isolation and are easily harmed by pests and diseases from elsewhere. At the border you must declare food, plants and outdoor gear. In kauri forests, clean your shoes at the wash stations. On offshore islands, check your bags for stowaways."
+    ]],
+    ["At a marae or sacred place", [
+      "If you are invited onto a [[marae]], your hosts will guide you through the welcome. Follow their lead, and ask if you are unsure. That is always better than guessing. [[tikanga|Tikanga]] differ between [[iwi]], so what you learned at one marae may not apply at the next.",
+      "Some places are [[wāhi tapu]], sacred places. Signs may ask you not to eat, climb or take photographs. Please do as they ask."
+    ]],
+    ["Earthquakes happen", [
+      "New Zealand sits on the boundary of two tectonic plates, and small earthquakes are common. The advice for a big one is simple: drop, cover and hold. If you are near the coast and the shaking is long or strong, move to high ground as soon as it stops."
+    ]]
+  ],
+  links: [
+    ["newzealand.com", "The official visitor site", "https://www.newzealand.com"],
+    ["Immigration New Zealand", "Visas and current entry requirements", "https://www.immigration.govt.nz"],
+    ["Live and Work New Zealand", "The government’s guide to settling in", "https://www.live-work.immigration.govt.nz"],
+    ["Department of Conservation", "Tracks, huts, parks and alerts", "https://www.doc.govt.nz"],
+    ["MetService", "The national weather forecaster", "https://www.metservice.com"],
+    ["Get Ready", "Official emergency preparedness advice", "https://getready.govt.nz"],
+    ["Electoral Commission", "Who can vote and how to enrol", "https://elections.nz"]
+  ]
+};
+
+window.ENZ.about = {
+  about: [
+    "I’m Shihan. I moved to New Zealand from Sri Lanka, and like every newcomer I arrived with a lot of questions. Why are there two names for so many places? What exactly is the Treaty, and why is it in the news every week? Why does everyone keep saying “sweet as”?",
+    "The answers exist, in excellent encyclopedias, museums and archives. But most of them are written for people who already know the country. Uncover New Zealand is my attempt to write the guide I wanted when I arrived: clear, friendly and honest, starting from zero.",
+    "It is a companion to my first site, Uncover Sri Lanka. Both are independent and non-commercial. There are no adverts, no bookings and nothing to buy."
+  ],
+  approach: [
+    ["I’m a newcomer, and I say so", "I am not an historian and I am not Māori. I am learning this as I write it. That is the point of the site, and it is also its limit."],
+    ["Māori history and culture", "I rely on Māori-led and official sources, attribute stories to the iwi they belong to, and link out generously so you can read further. This is version 1. The pages on Māori history and culture are based on the sources listed below and have not yet been reviewed by someone with the knowledge and standing to do so. I am looking for a reviewer, and I will update this page when that is done."],
+    ["Tradition and evidence", "Oral tradition and archaeology are different kinds of knowledge, and both matter. Where they are both part of a story, the page shows them side by side and does not rank them."],
+    ["Evergreen on purpose", "Pages cover what stays true for years. They avoid prices, opening hours, visa rules, statistics and the names of current office-holders, and link to official sites for anything that changes."],
+    ["Corrections are welcome", "If something here is wrong, incomplete or could be said better, I want to know. This matters most of all for iwi whose stories are told on these pages."]
+  ],
+  tiers: [
+    ["Māori-led and iwi sources", "For iwi histories, tikanga, te reo and Māori perspectives on events.", [
+      ["Te Aka Māori Dictionary", "https://maoridictionary.co.nz"],
+      ["Te Taura Whiri i te Reo Māori (Māori Language Commission)", "https://www.tetaurawhiri.govt.nz"],
+      ["Waitangi Tribunal", "https://www.waitangitribunal.govt.nz"],
+      ["Waitangi Treaty Grounds", "https://waitangi.org.nz"]
+    ]],
+    ["Official and public institutions", "For history, the Treaty, government, heritage sites and nature.", [
+      ["Te Ara: The Encyclopedia of New Zealand", "https://teara.govt.nz"],
+      ["NZHistory", "https://nzhistory.govt.nz"],
+      ["Heritage New Zealand Pouhere Taonga", "https://www.heritage.org.nz"],
+      ["Department of Conservation", "https://www.doc.govt.nz"],
+      ["Tohu Whenua", "https://tohuwhenua.nz"],
+      ["New Zealand Parliament", "https://www.parliament.nz"],
+      ["Electoral Commission", "https://elections.nz"]
+    ]],
+    ["Published historians", "The standard histories to read next. Pages will cite them directly as the site grows.", [
+      ["Atholl Anderson, Judith Binney and Aroha Harris, Tangata Whenua: An Illustrated History", ""],
+      ["Ranginui Walker, Ka Whawhai Tonu Matou: Struggle Without End", ""],
+      ["Claudia Orange, The Treaty of Waitangi", ""],
+      ["James Belich, The New Zealand Wars", ""],
+      ["Michael King, The Penguin History of New Zealand", ""]
+    ]]
+  ],
+  notUsed: "Tourism marketing copy, travel blogs and forums are not used as sources. Wikipedia can be a good way to find sources, but it is never cited as one."
+};
+</script>
+<script>
+/* Uncover New Zealand: images, captions and credits.
+   by = the credit line, url = where the image came from.
+   The four Wikimedia Commons images still need the author's name and licence added to "by". */
+window.ENZ = window.ENZ || {};
+
+window.ENZ.images = {
+  hero: { src: "assets/hero.jpg", w: 2000, h: 1685, name: "Taranaki Maunga (home page)",
+    alt: "A snow-capped volcanic cone at dawn, reflected in a still mountain pool edged with golden tussock.",
+    cap: "Taranaki Maunga, reflected in the Pouākai Tarns.",
+    by: "Photo by Sophie Turner on Unsplash", url: "https://unsplash.com/photos/mount-taranaki-reflection-in-pouaki-tarns-LZVmvKlchM0" },
+
+  waitangi: { src: "assets/waitangi.jpg", w: 1280, h: 753, name: "Treaty House, Waitangi",
+    alt: "A low white timber house with a verandah, set behind a wide lawn and framed by trees.",
+    cap: "The Treaty House at Waitangi. The Treaty was signed on the lawn in front of it.",
+    by: "Photo via Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:Treaty_House_at_Waitangi_Treaty_Grounds.jpg" },
+
+  russell: { src: "assets/russell-1843.jpg", w: 1400, h: 804, name: "Kororāreka in 1843",
+    alt: "A watercolour looking down on a small town on a curving bay, with sailing ships at anchor and islands beyond.",
+    cap: "Kororāreka in 1843, two years before most of the town was burned. Watercolour by Charles Johnson Pharazyn.",
+    by: "Te Papa (1992-0035-875), via Unsplash", url: "https://unsplash.com/photos/watercolor-landscape-of-a-coastal-town-with-ships-in-harbor-tBoyJ6hY6Jk" },
+
+  kerikeri: { src: "assets/kerikeri.jpg", w: 1280, h: 768, name: "Stone Store and Mission House, Kerikeri",
+    alt: "A two-storey stone building and a white timber house on a grassy bank above a river.",
+    cap: "The Stone Store, left, and the Mission House, right, seen across the Kerikeri River.",
+    by: "Photo via Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:Stone_Store_and_Kemp_House.jpg" },
+
+  ruapekapeka: { src: "assets/ruapekapeka.jpg", w: 1200, h: 1600, tall: true, pos: "center 30%", name: "Earthworks at Ruapekapeka",
+    alt: "Grass-covered ditches and banks running across a hilltop, with farmland in the distance.",
+    cap: "Earthworks at Ruapekapeka, still clear on the ground.",
+    by: "Photo via Wikimedia Commons", url: "https://commons.wikimedia.org/wiki/File:Ruapekapeka_fortification_earthworks.jpg" },
+
+  tane: { src: "assets/tane-mahuta.jpg", w: 1100, h: 1325, tall: true, pos: "center 20%", name: "Tāne Mahuta",
+    alt: "The massive pale trunk of a kauri tree rising out of dense green forest.",
+    cap: "Tāne Mahuta, the largest living kauri.",
+    by: "Photo via Wikimedia Commons, cropped", url: "https://commons.wikimedia.org/wiki/File:T%C4%81ne_Mahuta.jpg" },
+
+  kiwi: { src: "assets/kiwi.jpg", w: 1400, h: 965, name: "Brown kiwi",
+    alt: "A brown kiwi with a long pale beak, photographed against a dark green background.",
+    cap: "A brown kiwi.",
+    by: "Photo: Smithsonian’s National Zoo and Conservation Biology Institute, via Unsplash", url: "https://unsplash.com/photos/a-brown-kiwi-bird-stands-on-a-dark-teal-background-9D5LXtLyOzE" },
+
+  parliament: { src: "assets/parliament.jpg", w: 1400, h: 933, name: "Parliament, Wellington",
+    alt: "A round, tiered modern building beside a grand stone building with columns.",
+    cap: "Parliament in Wellington. The round Beehive is on the left, with Parliament House beside it.",
+    by: "Photo by Koon Chakhatrakan on Unsplash", url: "https://unsplash.com/photos/a-stone-building-with-palm-trees-I3Ndp_xMSBE" }
+};
+
+/* Which images appear on which page. The first one is the lead image, and is also used on the place's card. */
+window.ENZ.imageUse = {
+  "place-waitangi": ["waitangi"],
+  "place-bay-of-islands": ["russell", "kerikeri"],
+  "place-ruapekapeka": ["ruapekapeka"],
+  "place-waipoua": ["tane"],
+  "q-treaty": ["waitangi"],
+  "q-kiwis": ["kiwi"],
+  "q-government": ["parliament"]
+};
+</script>
+<script>
+(function () {
+  var E = window.ENZ;
+  var app = document.getElementById("app");
+  var X = E.explainers.slice().sort(function (a, b) { return a.n - b.n; });
+  var PLACES = E.places;
+  var T0 = 1250, T1 = 2000;
+  var pendingTerm = null, firstLoad = true, used = null;
+
+  function norm(s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
+  var GLOSS = {};
+  E.glossary.forEach(function (g, i) { GLOSS[norm(g.t)] = i; });
+  function attr(s) { return s.replace(/&/g, "&amp;").replace(/"/g, "&quot;"); }
+
+  /* [[term]] or [[term|shown]] becomes a glossary link, and is collected for "Words in this article". */
+  function rich(s) {
+    return s.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, function (m, t, shown) {
+      var i = GLOSS[norm(t)];
+      if (i === undefined) return shown || t;
+      if (used) used.add(i);
+      return '<a class="term" href="#glossary" data-term="' + i + '" title="' + attr(E.glossary[i].d) + '">' + (shown || t) + "</a>";
+    });
+  }
+  function paras(a) { return a.map(function (p) { return "<p>" + rich(p) + "</p>"; }).join(""); }
+  function sections(a) { return a.map(function (s) { return "<h2>" + s[0] + "</h2>" + paras(s[1]); }).join(""); }
+  function tri(filled) { return '<svg viewBox="0 0 24 22" aria-hidden="true"><path class="' + (filled ? "tri-fill" : "tri-line") + '" d="M12 3 22 20H2z"/></svg>'; }
+
+  var IMG = E.images || {}, USE = E.imageUse || {};
+  function credit(m) { return m.url ? '<a href="' + m.url + '" target="_blank" rel="noopener">' + m.by + "</a>" : m.by; }
+  function shot(k) {
+    var m = IMG[k];
+    if (!m) return "";
+    return '<figure class="shot' + (m.tall ? " tall" : "") + '"><img src="' + m.src + '" alt="' + attr(m.alt) + '" width="' + m.w + '" height="' + m.h + '" loading="lazy"><figcaption>' + m.cap + " " + credit(m) + ".</figcaption></figure>";
+  }
+  function shotsFor(id, a, b) { return (USE[id] || []).slice(a || 0, b).map(shot).join(""); }
+
+  function getRead() { try { return JSON.parse(localStorage.getItem("enz-read") || "[]") || []; } catch (e) { return []; } }
+  function markRead(id) { try { var r = getRead(); if (r.indexOf(id) < 0) { r.push(id); localStorage.setItem("enz-read", JSON.stringify(r)); } } catch (e) {} }
+
+  function find(id) {
+    for (var i = 0; i < X.length; i++) if (X[i].id === id) return { type: "q", d: X[i] };
+    for (var j = 0; j < PLACES.length; j++) if (PLACES[j].id === id) return { type: "place", d: PLACES[j] };
+    return null;
+  }
+  function pills(ids) {
+    return ids.map(function (id) {
+      if (id === "era-encounters") return '<a class="pill" href="#era-encounters">Encounters and the Treaty</a>';
+      var f = find(id);
+      return f ? '<a class="pill" href="#' + id + '">' + (f.type === "q" ? f.d.q : f.d.name) + "</a>" : "";
+    }).join("");
+  }
+  function sources(list) {
+    return '<div class="src"><h2 class="label">Sources</h2><ul>' + list.map(function (s) {
+      return "<li>" + (s[1] ? '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + "</a>" : s[0]) + "</li>";
+    }).join("") + '</ul><p class="rev">Last reviewed 2026. Spotted a mistake? See <a href="#about">how to send a correction</a>.</p></div>';
+  }
+  function wordsBox() {
+    var ids = Array.from(used).sort(function (a, b) { return a - b; });
+    if (!ids.length) return "";
+    return '<aside class="words"><h2 class="label">Words in this article</h2><dl>' + ids.map(function (i) {
+      var g = E.glossary[i];
+      return '<div><dt><a class="term" href="#glossary" data-term="' + i + '">' + g.t + "</a></dt> <dd>" + g.d + "</dd></div>";
+    }).join("") + "</dl></aside>";
+  }
+  function pairBox(p) {
+    if (!p) return "";
+    return '<div class="pair"><div><span class="label a">' + p.a[0] + "</span><p>" + p.a[1] + '</p></div><div><span class="label b">' + p.b[0] + "</span><p>" + p.b[1] + "</p></div></div>";
+  }
+  function timeline(linked) {
+    var span = T1 - T0;
+    var segs = E.eras.map(function (e) {
+      var st = 'left:' + ((e.start - T0) / span * 100).toFixed(2) + '%;width:' + ((e.end - e.start) / span * 100).toFixed(2) + '%';
+      return '<i class="tl-seg ' + e.tone + '" style="' + st + '" title="' + attr(e.name + ", " + e.dates) + '"></i>';
+    }).join("");
+    var ticks = [[1250, "first"], [1300, "opt"], [1642, ""], [1840, ""], [1900, "opt"], [2000, "last"]].map(function (t) {
+      return '<span class="' + t[1] + '" style="left:' + ((t[0] - T0) / span * 100).toFixed(2) + '%">' + t[0] + "</span>";
+    }).join("");
+    return '<div class="tl" role="img" aria-label="Timeline to scale from 1250 to 2000, in five eras">' +
+      '<div class="tl-row">' + segs + '</div><div class="tl-ticks" aria-hidden="true">' + ticks + "</div>" +
+      '<p class="tl-cap">Drawn to scale: each band is as wide as its era was long. Māori had lived here for more than three centuries before the first European ship appeared in 1642.</p></div>';
+  }
+  function placeCard(p) {
+    var m = IMG[(USE[p.id] || [])[0]];
+    var inner = '<div class="chips"><span class="chip ' + p.kind + '">' + (p.kind === "nature" ? "Nature" : "Heritage") + "</span></div><h3>" + p.name + "</h3><p>" + p.card + '</p><span class="meta">' + p.region + "</span>";
+    if (!m) return '<a class="card" href="#' + p.id + '">' + inner + "</a>";
+    return '<a class="card pic" href="#' + p.id + '"><img src="' + m.src + '" alt="" width="' + m.w + '" height="' + m.h + '" loading="lazy" style="object-position:' + (m.pos || "center") + '"><div class="bd">' + inner + "</div></a>";
+  }
+
+  var views = {
+    home: function () {
+      var read = getRead();
+      var next = X.filter(function (x) { return read.indexOf(x.id) < 0; })[0];
+      var done = X.filter(function (x) { return read.indexOf(x.id) >= 0; }).length;
+      var popular = ["q-two-names", "q-treaty", "q-kia-ora", "q-kiwis", "q-government", "q-holidays"];
+      var sample = ["kia ora", "whānau", "sweet as"].map(function (t) { var g = E.glossary[GLOSS[norm(t)]]; return "<div><dt>" + g.t + "</dt> <dd>" + g.d + "</dd></div>"; }).join("");
+      return '<section class="hero"><div class="wrap top">' +
+        '<span class="label">An independent guide for newcomers and the curious</span>' +
+        "<h1>Understand the country, not just the view.</h1>" +
+        "<p>Uncover New Zealand answers the questions people really ask about Aotearoa: its two names, its treaty, its people and its places. Discover the stories behind the land.</p>" +
+        '<div class="btns"><a class="btn btn-main" href="#start">New here? Start here</a><a class="btn btn-ghost" href="#places">Browse places</a></div>' +
+        (IMG.hero ? '<p class="credit">' + IMG.hero.cap + " " + credit(IMG.hero) + ".</p>" : "") + "</div></section>" +
+
+        '<section class="section"><div class="wrap"><div class="startbox"><div>' +
+        '<span class="label">Start Here</span><h2>Ten questions, in order. About half an hour of reading.</h2>' +
+        "<p>If you have just arrived, or you are thinking about coming, this path gives you a solid footing: who came first, the Treaty, the wars, the people, the language, and how the place is run.</p>" +
+        '<a class="more" href="#start">See the whole path</a></div><div>' +
+        (next
+          ? '<span class="label">' + (done ? "Your next stop · " + done + " of 10 visited" : "Your first stop") + '</span><a class="nextstop" href="#' + next.id + '">' + tri(false) + "<span><strong>" + next.q + "</strong><span>" + next.blurb + "</span></span></a>"
+          : '<span class="label">All 10 stops visited</span><a class="nextstop" href="#story">' + tri(true) + "<span><strong>You have walked the whole path.</strong><span>Keep going with The Story.</span></span></a>") +
+        "</div></div></div></section>" +
+
+        '<section class="section"><div class="wrap"><span class="label">Popular questions</span><ul class="qlist">' +
+        popular.map(function (id) { var x = find(id).d; return '<li><a href="#' + id + '"><span>' + x.q + '</span><span aria-hidden="true">→</span></a></li>'; }).join("") +
+        "</ul></div></section>" +
+
+        '<section class="section"><div class="wrap"><span class="label">The Story</span><h2>About 750 years, in five eras</h2>' + timeline() +
+        '<a class="more" href="#story">Read the story</a></div></section>' +
+
+        '<section class="section"><div class="wrap"><span class="label">Places</span><h2>Start in Northland, where much of the country’s founding story happened</h2>' +
+        '<div class="grid">' + PLACES.map(placeCard).join("") + '</div><a class="more" href="#places">All places</a></div></section>' +
+
+        '<section class="section cta"><div class="wrap"><span class="label">Glossary</span><h2>Words you will hear</h2><dl class="gloss">' + sample + "</dl>" +
+        '<a class="more" href="#glossary">Browse all ' + E.glossary.length + " words</a></div></section>";
+    },
+
+    start: function () {
+      var read = getRead();
+      var soon = ["What is a marae, and how do I behave if I’m invited onto one?", "What does the haka mean?", "Why is New Zealand so volcanic and earthquake-prone?", "Why does New Zealand have so many flightless birds and no snakes?"];
+      return '<div class="page-head"><div class="wrap"><span class="label">Start Here</span><h1 tabindex="-1">New to New Zealand? Walk this path.</h1>' +
+        '<p class="lead">Ten short articles, each answering one question, in an order that builds. Walking tracks here are marked with orange triangles. Follow these the same way.</p></div></div>' +
+        '<section class="section"><div class="wrap"><ol class="track">' + X.map(function (x) {
+          var r = read.indexOf(x.id) >= 0;
+          return '<li><a href="#' + x.id + '"><span class="mk">' + tri(r) + '</span><span class="tx"><span class="meta">Stop ' + x.n + " of 10 · " + x.mins + " min read" + (r ? " · <b>Visited</b>" : "") + '</span><span class="q">' + x.q + '</span><span class="bl">' + x.blurb + "</span></span></a></li>";
+        }).join("") + "</ol></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Read next</h2><p class="lead">Four more questions are being written.</p><ul class="soon">' +
+        soon.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ul></div></section>";
+    },
+
+    q: function (x) {
+      used = new Set();
+      var i = X.indexOf(x), next = X[i + 1];
+      var body = sections(x.sections);
+      var why = rich(x.why);
+      var html = '<div class="page-head"><div class="wrap"><a class="back" href="#start">← Start Here · Stop ' + x.n + " of 10</a>" +
+        '<h1 tabindex="-1">' + x.q + '</h1><span class="label">' + x.mins + " minute read</span></div></div>" +
+        '<section class="section"><div class="wrap">' +
+        '<div class="short"><span class="label">The short answer</span><p>' + x.short + "</p></div>" +
+        '<p class="why"><strong>Why it matters to you.</strong> ' + why + "</p>" + shotsFor(x.id) +
+        '<div class="prose">' + body + "</div>" + pairBox(x.pair) + wordsBox() +
+        (x.see.length ? '<div class="onward"><h2 class="label">See it for yourself</h2><div class="links">' + pills(x.see) + "</div></div>" : "") +
+        '<div class="onward"><h2 class="label">' + (next ? "Next on the path · Stop " + next.n + " of 10" : "End of the path") + "</h2>" +
+        (next
+          ? '<a class="nextstop" href="#' + next.id + '">' + tri(false) + "<span><strong>" + next.q + "</strong><span>" + next.blurb + "</span></span></a>"
+          : '<a class="nextstop" href="#story">' + tri(true) + "<span><strong>You have reached the last stop.</strong><span>Keep going with The Story, or pick a place to visit.</span></span></a>") +
+        "</div>" + sources(x.sources) + "</div></section>";
+      used = null;
+      markRead(x.id);
+      return html;
+    },
+
+    story: function () {
+      return '<div class="page-head"><div class="wrap"><span class="label">The Story</span><h1 tabindex="-1">About 750 years, in five eras</h1>' +
+        '<p class="lead">New Zealand’s human history is short and unusually well recorded, in memory, in the ground and on paper. This is the joined-up version.</p></div></div>' +
+        '<section class="section"><div class="wrap">' + timeline() + '<ol class="eras">' + E.eras.map(function (e) {
+          return '<li><div class="when"><span class="n"><i class="' + e.tone + '"></i>' + e.n + "</span><span>" + e.dates + '</span></div><div class="what"><h2>' + e.name + "</h2><p>" + e.summary + "</p>" +
+            (e.full ? '<a class="more" href="#' + e.id + '">Read the full story of this era</a>'
+              : '<a class="more" href="#' + e.link + '">' + e.linkLabel + '</a><span class="note">A full page for this era is being written.</span>') + "</div></li>";
+        }).join("") + "</ol></div></section>";
+    },
+
+    era: function () {
+      var p = E.eraPage;
+      used = new Set();
+      var body = sections(p.sections);
+      var html = '<div class="page-head"><div class="wrap"><a class="back" href="#story">← The Story · Era 3 of 5</a><h1 tabindex="-1">' + p.title + '</h1><p class="lead">' + p.lead + "</p></div></div>" +
+        '<section class="section"><div class="wrap"><dl class="facts">' + p.facts.map(function (f) { return "<dt>" + f[0] + "</dt><dd>" + f[1] + "</dd>"; }).join("") + "</dl>" +
+        '<div class="prose">' + body + "</div>" + wordsBox() +
+        '<div class="onward"><h2 class="label">See it today</h2><div class="links">' + pills(p.see) + "</div></div>" +
+        '<div class="onward"><h2 class="label">Related questions</h2><div class="links">' + pills(p.related) + "</div></div>" +
+        sources(p.sources) + "</div></section>";
+      used = null;
+      return html;
+    },
+
+    places: function () {
+      return '<div class="page-head"><div class="wrap"><span class="label">Places</span><h1 tabindex="-1">Places that tell the story</h1>' +
+        '<p class="lead">Every place here is chosen for what it explains about the country, not only for how it looks. This first set covers Northland, where the Treaty was signed and the first war was fought.</p></div></div>' +
+        '<section class="section"><div class="wrap"><div class="grid">' + PLACES.map(placeCard).join("") + "</div></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Coming next</h2><p class="lead">The rest of the country, one region at a time.</p><ul class="soon">' +
+        E.placesNext.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ul></div></section>";
+    },
+
+    place: function (p) {
+      used = new Set();
+      var story = paras(p.story);
+      var see = p.seeList.map(function (s) { return "<li>" + rich(s) + "</li>"; }).join("");
+      var html = '<div class="page-head"><div class="wrap"><a class="back" href="#places">← Places</a>' +
+        '<div class="chips"><span class="chip ' + p.kind + '">' + (p.kind === "nature" ? "Nature" : "Heritage") + "</span></div>" +
+        '<h1 tabindex="-1">' + p.name + '</h1><p class="lead">' + p.hook + "</p></div></div>" +
+        '<section class="section"><div class="wrap"><dl class="facts">' + p.facts.map(function (f) { return "<dt>" + f[0] + "</dt><dd>" + f[1] + "</dd>"; }).join("") + "</dl>" +
+        shotsFor(p.id, 0, 1) + '<div class="prose"><h2>The story</h2>' + story + "<h2>What you will see</h2><ul>" + see + "</ul><h2>Visiting basics</h2><p>" + p.basics + "</p>" +
+        (p.respect ? '<h2>How to show respect</h2><p class="respect">' + p.respect + "</p>" : "") + "</div>" + shotsFor(p.id, 1) + wordsBox() +
+        '<div class="onward"><h2 class="label">Read the background</h2><div class="links">' + pills(p.related) + (p.eras.indexOf("era-encounters") >= 0 ? pills(["era-encounters"]) : '<a class="pill" href="#story">The Story</a>') + "</div></div>" +
+        sources(p.sources) + "</div></section>";
+      used = null;
+      return html;
+    },
+
+    glossary: function () {
+      function group(k) {
+        return E.glossary.map(function (g, i) { return g.g === k ? '<div id="g-' + i + '" data-s="' + attr(norm(g.t + " " + g.d)) + '"><dt>' + g.t + "</dt> <dd>" + g.d + "</dd></div>" : ""; }).join("");
+      }
+      return '<div class="page-head"><div class="wrap"><span class="label">Glossary</span><h1 tabindex="-1">Words you will hear</h1>' +
+        '<p class="lead">Te reo Māori and New Zealand English, in plain terms. Meanings here are short on purpose. For fuller definitions of Māori words, use <a href="https://maoridictionary.co.nz" target="_blank" rel="noopener">Te Aka Māori Dictionary</a>.</p>' +
+        '<div class="find"><label class="label" for="gloss-q">Find a word</label><input id="gloss-q" type="search" autocomplete="off" placeholder="Try whānau, or togs"></div></div></div>' +
+        '<section class="section"><div class="wrap"><h2>Te reo Māori</h2><dl class="gloss" id="gl-reo">' + group("reo") + "</dl></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Kiwi English</h2><dl class="gloss" id="gl-kiwi">' + group("kiwi") + '</dl><p id="gl-none" class="lead" hidden>No words match. Try a shorter search.</p></div></section>';
+    },
+
+    bearings: function () {
+      var b = E.bearings;
+      used = new Set();
+      var body = sections(b.items);
+      used = null;
+      return '<div class="page-head"><div class="wrap"><span class="label">Your bearings</span><h1 tabindex="-1">Getting your bearings</h1><p class="lead">' + b.lead + "</p></div></div>" +
+        '<section class="section"><div class="wrap"><div class="prose">' + body + "</div></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Official sites for anything that changes</h2><ul class="offlinks">' +
+        b.links.map(function (l) { return '<li><a href="' + l[2] + '" target="_blank" rel="noopener">' + l[0] + "</a><span>" + l[1] + "</span></li>"; }).join("") + "</ul></div></section>";
+    },
+
+    about: function () {
+      var a = E.about;
+      return '<div class="page-head"><div class="wrap"><span class="label">About</span><h1 tabindex="-1">Written by a newcomer, for newcomers</h1></div></div>' +
+        '<section class="section"><div class="wrap"><div class="prose">' + a.about.map(function (p) { return "<p>" + p + "</p>"; }).join("") +
+        '<p>You can find me on <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">LinkedIn</a>.</p></div></div></section>' +
+        '<section class="section"><div class="wrap"><h2>Our approach</h2><div class="approach">' + a.approach.map(function (x) { return "<div><h3>" + x[0] + "</h3><p>" + x[1] + "</p></div>"; }).join("") + "</div></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Sources</h2><p class="lead">Every page lists its own sources. These are the ones the site relies on most.</p><div class="tiers">' +
+        a.tiers.map(function (t) {
+          return "<div><h3>" + t[0] + "</h3><p>" + t[1] + "</p><ul>" + t[2].map(function (s) { return "<li>" + (s[1] ? '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + "</a>" : s[0]) + "</li>"; }).join("") + "</ul></div>";
+        }).join("") + '</div><p class="tl-cap">' + a.notUsed + "</p></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Corrections</h2><div class="prose"><p>To report an error or suggest an improvement, send me a message on <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">LinkedIn</a>. Please include the page and, if you can, a source.</p>' +
+        "<h2>Image credits</h2><p>Photographs and artworks are used under free licences. Each is credited where it appears, and all are listed here.</p><ul>" +
+        Object.keys(IMG).map(function (k) { return "<li>" + IMG[k].name + ": " + credit(IMG[k]) + "</li>"; }).join("") + "</ul></div></div></section>";
+    }
+  };
+
+  function route() {
+    var id = (location.hash || "#home").slice(1) || "home";
+    var html, key = id, title = "";
+    var f = find(id);
+    if (f && f.type === "q") { html = views.q(f.d); key = "start"; title = f.d.q; }
+    else if (f && f.type === "place") { html = views.place(f.d); key = "places"; title = f.d.name; }
+    else if (id === "era-encounters") { html = views.era(); key = "story"; title = E.eraPage.title; }
+    else if (views[id] && id !== "q" && id !== "place" && id !== "era") { html = views[id](); title = { start: "Start Here", story: "The Story", places: "Places", glossary: "Glossary", bearings: "Getting your bearings", about: "About" }[id] || ""; }
+    else { html = views.home(); key = "home"; }
+    app.innerHTML = html;
+    document.title = (title ? title + " · " : "") + "Uncover New Zealand";
+    Array.prototype.forEach.call(document.querySelectorAll(".nav a"), function (a) {
+      if (a.getAttribute("data-k") === key) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    if (key === "glossary") bindGlossary();
+    if (key === "glossary" && pendingTerm !== null) {
+      var el = document.getElementById("g-" + pendingTerm);
+      pendingTerm = null;
+      if (el) { firstLoad = false; el.classList.add("hit"); el.scrollIntoView({ block: "center" }); return; }
+    }
+    if (!firstLoad) {
+      window.scrollTo(0, 0);
+      var h = app.querySelector("h1");
+      if (h) h.focus({ preventScroll: true });
+    }
+    firstLoad = false;
+  }
+
+  function bindGlossary() {
+    var q = document.getElementById("gloss-q");
+    if (!q) return;
+    q.addEventListener("input", function () {
+      var v = norm(q.value.trim()), shown = 0;
+      Array.prototype.forEach.call(document.querySelectorAll(".gloss div[data-s]"), function (d) {
+        var ok = !v || d.getAttribute("data-s").indexOf(v) >= 0;
+        d.hidden = !ok; if (ok) shown++;
+      });
+      document.getElementById("gl-none").hidden = shown > 0;
+    });
+  }
+
+  document.addEventListener("click", function (ev) {
+    var a = ev.target.closest ? ev.target.closest("a.term") : null;
+    if (!a) return;
+    pendingTerm = a.getAttribute("data-term");
+    if ((location.hash || "") === "#glossary") { ev.preventDefault(); route(); }
+  });
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body>
+</html>
