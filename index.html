@@ -5,7 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>:root{color-scheme:light;box-sizing:border-box}body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Uncover New Zealand</title>
-<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Uncover New Zealand">
+<meta property="og:title" content="Uncover New Zealand">
+<meta property="og:description" content="Discover the stories behind the land: a clear, friendly guide to the history, culture and places of Aotearoa, written by a newcomer for newcomers.">
 <meta name="description" content="Uncover New Zealand. Discover the stories behind the land: a clear, friendly guide to the history, culture and places of Aotearoa, written by a newcomer for newcomers.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
@@ -1299,7 +1305,7 @@ window.ENZ.imageUse = {
       return '<div class="page-head"><div class="wrap"><span class="label">About</span><h1 tabindex="-1">Written by a newcomer, for newcomers</h1></div></div>' +
         '<section class="section"><div class="wrap"><div class="prose">' + a.about.map(function (p) { return "<p>" + p + "</p>"; }).join("") +
         '<p>You can find me on <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">LinkedIn</a>.</p></div></div></section>' +
-        '<section class="section"><div class="wrap"><h2>My approach</h2><div class="approach">' + a.approach.map(function (x) { return "<div><h3>" + x[0] + "</h3><p>" + x[1] + "</p></div>"; }).join("") + "</div></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Our approach</h2><div class="approach">' + a.approach.map(function (x) { return "<div><h3>" + x[0] + "</h3><p>" + x[1] + "</p></div>"; }).join("") + "</div></div></section>" +
         '<section class="section"><div class="wrap"><h2>Sources</h2><p class="lead">Every page lists its own sources. These are the ones the site relies on most.</p><div class="tiers">' +
         a.tiers.map(function (t) {
           return "<div><h3>" + t[0] + "</h3><p>" + t[1] + "</p><ul>" + t[2].map(function (s) { return "<li>" + (s[1] ? '<a href="' + s[1] + '" target="_blank" rel="noopener">' + s[0] + "</a>" : s[0]) + "</li>"; }).join("") + "</ul></div>";
