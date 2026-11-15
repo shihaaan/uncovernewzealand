@@ -278,7 +278,7 @@ footer .wrap { padding-block: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5re
 <main id="app"></main>
 <footer>
   <div class="wrap">
-    <span>Uncover New Zealand. An independent, non-commercial guide by <a href="https://shihaaan.github.io/portfolio/" target="_blank" rel="noopener">Shihan</a>.</span>
+    <span>Uncover New Zealand. An independent, non-commercial guide by <a href="https://www.linkedin.com/in/shihansabir/" target="_blank" rel="noopener">Shihan</a>.</span>
     <span>Version 1 · Last reviewed 2026 · <a href="#about">Sources and approach</a></span>
   </div>
 </footer>
@@ -1071,6 +1071,315 @@ window.ENZ.imageUse = {
 };
 </script>
 <script>
+/* Uncover New Zealand: nine more places (the rest of the country), with their photos. Loaded after the other data files. */
+window.ENZ = window.ENZ || {};
+
+window.ENZ.places = window.ENZ.places.concat([
+  {
+    id: "place-auckland-cones", name: "Auckland’s volcanic cones", maori: "Tāmaki Makaurau", kind: "heritage", region: "Auckland",
+    hook: "A city built on volcanoes, whose green summits were once some of the largest fortified villages in the country.",
+    card: "Grassy craters in the middle of the biggest city, once fortified villages and now returned to iwi.",
+    facts: [["Region", "Auckland (Tāmaki Makaurau)"], ["Type", "Volcanic cones and former pā"], ["Owned by", "Thirteen iwi and hapū of Auckland, held in trust for everyone"], ["Start with", "Maungawhau / Mount Eden"]],
+    story: [
+      "Auckland sits on a field of dozens of small volcanoes. Most erupted only once, leaving a scatter of cones, craters and lagoons across the city. The youngest, Rangitoto Island in the harbour, appeared only about 600 years ago, after people had settled here.",
+      "For Māori the cones were ideal places to live. The volcanic soil was rich for growing [[kūmara]], two harbours lay close by, and a steep hill is easy to defend. Over centuries most of the larger cones were shaped into [[pā]]. The stepped terraces you can still see on their slopes are what remains of house sites, gardens and storage pits.",
+      "After 1840 the city grew over and around the cones. Several were quarried for stone, and some disappeared altogether. The ones that survived became parks.",
+      "In 2014, as part of a Treaty settlement, ownership of fourteen of these [[maunga]] was returned to thirteen [[iwi]] and [[hapū]] of Auckland, known together as Ngā Mana Whenua o Tāmaki Makaurau. The mountains are called the Tūpuna Maunga, the ancestral mountains. They are held in trust for the benefit of both the iwi and the other people of Auckland, they remain open to the public, and they are run by an authority on which iwi and Auckland Council have equal numbers."
+    ],
+    seeList: [
+      "Maungawhau / Mount Eden, the best place to start. A boardwalk circles the rim of a deep, steep-sided crater, with the city centre spread out below.",
+      "The terraces of the old [[pā]], clearest in low morning or evening light.",
+      "Maungakiekie / One Tree Hill, a much larger pā site set in parkland, with terraces across most of the hill."
+    ],
+    basics: "Allow an hour or two for Maungawhau. It is close to the city centre and easy to reach by bus. Vehicle access to the summits is restricted, so expect a short uphill walk. Go early or late in the day for the best light and the clearest views.",
+    respect: "The crater of Maungawhau is sacred, and visitors are asked not to go into it. Stay on the paths and boardwalks, which also protect the earthworks of the pā.",
+    eras: [], related: ["q-maori", "q-treaty"],
+    sources: [
+      ["Tūpuna Maunga Authority: The Treaty settlement", "https://maunga.nz/treaty-of-waitangi-settlement"],
+      ["Office of the Auditor-General: About the Tūpuna Maunga Authority", "https://www.oag.parliament.nz/2016/co-governance/appendix2.htm"],
+      ["Tiaki Tāmaki Makaurau: Tūpuna Maunga Authority", "https://tiakitamakimakaurau.nz/understanding-conservation/matauranga-and-conservation-working-side-by-side/tupuna-maunga-authority/"]
+    ]
+  },
+  {
+    id: "place-rotorua", name: "Rotorua and Whakarewarewa", maori: "", kind: "heritage", region: "Bay of Plenty",
+    hook: "A village built among hot springs and geysers, where Māori guides have been welcoming visitors for generations.",
+    card: "A living village among hot springs, and the birthplace of Māori-led tourism.",
+    facts: [["Region", "Bay of Plenty, central North Island"], ["Type", "Geothermal valley and living village"], ["People of the village", "Tūhourangi Ngāti Wāhiao, of Te Arawa"], ["Good to know", "The whole town smells faintly of sulphur. You stop noticing"]],
+    story: [
+      "Rotorua sits in one of the most active geothermal areas in the world. Steam rises from parks, gutters and back gardens. For the people of Te Arawa, whose home this is, the hot springs have always been useful: for cooking, for bathing, for warmth and for treating illness.",
+      "They were also the start of tourism in New Zealand. In the 1800s the great attraction was the Pink and White Terraces beside Lake Rotomahana, huge staircases of silica formed by hot springs. The Tūhourangi people guided visitors there and ran the business themselves.",
+      "On 10 June 1886 Mount Tarawera erupted. The terraces were destroyed or buried, along with villages and many of the people in them. Survivors were taken in by their Te Arawa relatives, and many made a new home at Whakarewarewa, the village of Ngāti Wāhiao. Its full name is Te Whakarewarewatanga o te ope taua a Wāhiao, the uprising of the war party of Wāhiao. The government bought the devastated land soon afterwards, so they could not go back.",
+      "At Whakarewarewa they carried on guiding. By tradition it was the women of Tūhourangi and Ngāti Wāhiao who led visitors through the valley. Some, such as Sophia Hinerangi and Mākereti Papakura, became famous far beyond New Zealand. Their descendants still live in the village and still guide visitors through it."
+    ],
+    seeList: [
+      "Whakarewarewa village, where people live among the steam vents and use the hot pools for cooking and bathing, as their ancestors did.",
+      "Pōhutu, the best-known geyser in the country, in the same valley. It erupts many times a day.",
+      "Boiling mud pools and silica terraces, on walking trails around the valley.",
+      "Cultural performances, including [[waiata]] and [[haka]], given by the people of the village."
+    ],
+    basics: "Allow half a day. The geothermal valley has two neighbouring visitor sites: the village itself, and Te Puia, which includes the national Māori arts and crafts school. Both charge for entry. Check their websites for current times and prices.",
+    respect: "This is people’s home as well as a place to visit. Stay with your guide or on the marked paths, and ask before photographing residents. The ground and water are hot enough to cause serious burns, so stay behind the barriers.",
+    eras: [], related: ["q-maori", "q-people-today"],
+    sources: [
+      ["Te Ara: Te Arawa, the Tarawera eruption", "https://teara.govt.nz/en/te-arawa/page-5"],
+      ["Te Ara: Te tāpoi Māori, Māori tourism", "https://teara.govt.nz/en/te-tapoi-maori-maori-tourism/print"],
+      ["NZHistory: The guides of Whakarewarewa", "https://nzhistory.govt.nz/node/57900"],
+      ["Whakarewarewa, the Living Māori Village: Our village", "https://whakarewarewa.com/about-us/our-village/"]
+    ]
+  },
+  {
+    id: "place-wellington", name: "Wellington: Parliament, Te Papa and the National Library", maori: "Te Whanganui-a-Tara", kind: "heritage", region: "Wellington",
+    hook: "The capital, where you can watch Parliament at work and stand in front of the Treaty itself.",
+    card: "The capital: watch Parliament at work, then stand in front of the Treaty itself.",
+    facts: [["Region", "Wellington (Te Whanganui-a-Tara), at the foot of the North Island"], ["Type", "Capital city"], ["Capital since", "1865"], ["Good to know", "The three places are within walking distance of each other"]],
+    story: [
+      "Wellington has been the capital since 1865, when Parliament moved south from Auckland to be nearer the middle of the country.",
+      "Parliament is three buildings side by side, each from a different era. The oldest is the Parliamentary Library, the only part to survive a fire in 1907. Beside it stands Parliament House, built of stone between 1912 and 1922 and never finished: the plan included a second wing that was not built. The third is the round, tiered Beehive, where ministers have their offices. It began as a sketch by the British architect Sir Basil Spence in the 1960s and was finished in 1981.",
+      "Across the road, the National Library holds the country’s founding documents. They have had a rough life. Around 1908 the Treaty sheets were found in a basement, damaged by water and gnawed by rodents. Since 2017 they have been on permanent display in a room called He Tohu, alongside He Whakaputanga, the 1835 Declaration of Independence, and the 1893 petition that won women the vote.",
+      "On the waterfront is Te Papa Tongarewa, the national museum. It is the best single place to see the country’s story told in objects: Māori [[taonga]], natural history, and the lives of people who came here from elsewhere."
+    ],
+    seeList: [
+      "Parliament. Guided tours are free, and when the House is sitting you can watch debates from the public gallery.",
+      "He Tohu at the National Library, where you can look closely at the signatures on the Treaty. Entry is free.",
+      "Te Papa, which needs half a day at least."
+    ],
+    basics: "Allow a full day for all three. Parliament and the National Library face each other across Molesworth Street, and Te Papa is a flat walk of about half an hour along the waterfront. Check each one’s website for current opening hours and tour times.",
+    respect: "",
+    eras: [], related: ["q-government", "q-treaty"],
+    sources: [
+      ["NZHistory: Preserving the Treaty documents", "https://nzhistory.govt.nz/politics/treaty/read-the-treaty/preserving-the-documents"],
+      ["Te Ara: He Tohu", "https://teara.govt.nz/en/photograph/47782/he-tohu"],
+      ["Te Ara: Public buildings", "https://teara.govt.nz/mi/public-buildings/print"],
+      ["New Zealand Parliament", "https://www.parliament.nz"]
+    ]
+  },
+  {
+    id: "place-arrowtown", name: "Arrowtown and the Otago goldfields", maori: "", kind: "heritage", region: "Otago",
+    hook: "A gold-rush town with its main street intact, and the huts of the Chinese miners who worked the river after everyone else had left.",
+    card: "A gold-rush town, and the riverside huts of the Chinese miners who came after the rush.",
+    facts: [["Region", "Otago, near Queenstown"], ["Linked era", "Colonisation and the New Zealand Wars"], ["Type", "Historic town and heritage site"], ["Gold found", "1862, in the Arrow River"]],
+    story: [
+      "Gold was found in the Arrow River in 1862. Within months around 1,500 miners were camped along its banks, and a town grew up to supply them. Rushes like this one drew tens of thousands of people to Otago and, for a time, made Dunedin the largest city in the country.",
+      "When the easy gold ran out, many European miners left for newer fields. Chinese miners took their place and patiently reworked the ground. In 1866 there were fewer than 200 Chinese miners in Otago. By 1874 there were more than 3,500.",
+      "Most came from the countryside around Guangzhou in southern China, sent by their families to earn money and come home. Many did just that. Others never earned enough to leave. They met harassment and discrimination, and lived apart from the town in a cluster of small huts beside Bush Creek. Almost all were men. By 1885 the settlement had about ten huts, two stores, a large social hall and a vegetable garden.",
+      "The settlement was excavated by archaeologists in 1983 and has been partly restored. Its best-known building is the store last run by Ah Lum, who could read and write in both Chinese and English and acted as interpreter, letter-writer and banker for his community."
+    ],
+    seeList: [
+      "The Chinese settlement beside Bush Creek: restored huts built of stone, mud brick and corrugated iron, some of them tucked under rock overhangs.",
+      "Ah Lum’s store, at the entrance to the settlement.",
+      "Buckingham Street, the main street, lined with small wooden and stone buildings from the gold-rush years.",
+      "The Arrow River, where people still pan for gold."
+    ],
+    basics: "Allow under an hour for the Chinese settlement and half a day for the town. The settlement is at the top end of Buckingham Street, and its main path suits wheelchairs and pushchairs. Signs are in English and Chinese. Autumn, when the trees along the river turn gold, is the busiest season.",
+    respect: "",
+    eras: [], related: ["q-people-today"],
+    sources: [
+      ["Department of Conservation: Arrowtown Chinese Settlement", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/arrowtown-area/things-to-do/arrowtown-chinese-settlement/"],
+      ["Department of Conservation: Arrowtown Chinese Settlement brochure", "https://www.doc.govt.nz/globalassets/documents/parks-and-recreation/places-to-visit/otago/arrowtown-chinese-settlement.pdf"]
+    ]
+  },
+  {
+    id: "place-tongariro", name: "Tongariro National Park", maori: "", kind: "nature", region: "Central North Island",
+    hook: "Three active volcanoes, sacred to the people who live beside them, and the country’s first national park.",
+    card: "Three sacred volcanoes, gifted in 1887 to become the country’s first national park.",
+    facts: [["Region", "Central North Island"], ["Type", "Active volcanoes"], ["Tangata whenua", "Ngāti Tūwharetoa"], ["World Heritage", "For nature (1990) and for culture (1993)"]],
+    story: [
+      "Three volcanoes stand in a line at the centre of the North Island: Tongariro, Ngāuruhoe and Ruapehu, the highest mountain in the island. All three are active.",
+      "To Ngāti Tūwharetoa these are ancestral mountains. Their traditions tell how the ancestor Ngātoroirangi climbed them more than thirty generations ago and claimed the land for his descendants.",
+      "By the 1880s the mountains were under threat. Land around them was being surveyed and argued over in the Native Land Court, and there was a real chance they would be divided and sold. On 23 September 1887 the paramount chief of Ngāti Tūwharetoa, Horonuku Te Heuheu Tūkino IV, placed the three summits under the protection of the Crown. He wanted them kept, in his words, as “a sacred place of the Crown, a gift forever from me and my people”.",
+      "That gift became the core of Tongariro National Park, established in 1894. It was the first national park in New Zealand and the fourth in the world. A century later it became the first place on the World Heritage list recognised as a cultural landscape, at the request of Ngāti Tūwharetoa, on top of its earlier listing for its natural features.",
+      "The story has a harder edge as well. The park was vested in the Crown alone, which reduced Ngāti Tūwharetoa’s say over their own mountains."
+    ],
+    seeList: [
+      "The Tongariro Alpine Crossing, a day walk of about 20 kilometres across craters, lava flows and steaming vents.",
+      "The Emerald Lakes, coloured by minerals washed from the rock around them.",
+      "The cone of Ngāuruhoe, close to a textbook volcano.",
+      "Shorter walks from Whakapapa Village, on the slopes of Ruapehu, for those who do not want a full day."
+    ],
+    basics: "The Alpine Crossing takes a full day and is a one-way walk, so you need transport at both ends. This is alpine country: snow, wind and cloud can arrive in any month, and people get into trouble every year. Check the Department of Conservation website for conditions, volcanic alerts and any booking requirements before you go.",
+    respect: "The peaks are [[tapu]]. Ngāti Tūwharetoa and the Department of Conservation ask walkers not to climb to the summits, and not to touch or enter the lakes. Stay on the marked track.",
+    eras: [], related: ["q-maori", "q-treaty"],
+    sources: [
+      ["Department of Conservation: Tongariro history and culture", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/about-tongariro-national-park/history-and-culture/"],
+      ["NZHistory: Tongariro mountains protected, 23 September 1887", "https://nzhistory.govt.nz/tongariro-mountains-gifted-to-crown"],
+      ["UNESCO World Heritage Centre: Tongariro National Park", "https://whc.unesco.org/en/list/421"]
+    ]
+  },
+  {
+    id: "place-taupo", name: "Lake Taupō and the volcanic plateau", maori: "", kind: "nature", region: "Central North Island",
+    hook: "The country’s largest lake, lying in the crater of one of the most powerful volcanoes on Earth.",
+    card: "The largest lake in the country fills the crater of a supervolcano.",
+    facts: [["Region", "Central North Island"], ["Type", "Volcanic crater lake"], ["Tangata whenua", "Ngāti Tūwharetoa"], ["Last eruption", "About 1,800 years ago"]],
+    story: [
+      "Lake Taupō looks like a calm inland sea. It is in fact a caldera: a crater left behind when the ground collapsed into an emptied magma chamber.",
+      "The collapse happened about 26,500 years ago, in one of the largest eruptions the world has seen. It threw out around 1,200 cubic kilometres of pumice and ash and buried much of the central North Island, in places up to 200 metres deep.",
+      "The volcano has erupted 28 times since. The most recent eruption, around the year 232, was also enormous. A flow of hot ash and gas swept outward for 80 kilometres in every direction and destroyed everything in its path. Nobody saw it: New Zealand would not be settled for another thousand years.",
+      "The lake’s full name is Taupō-nui-a-Tia, the great cloak of Tia, after the ancestor who explored the district. It is a [[taonga]] of Ngāti Tūwharetoa, who own the bed of the lake and allow the public free use of its waters. The Waikato, the country’s longest river, begins here, pouring out of the lake’s northern end."
+    ],
+    seeList: [
+      "The view south across the lake to the volcanoes of Tongariro National Park, best on a clear winter morning.",
+      "Huka Falls, just north of the town, where the Waikato River is forced through a narrow rock channel.",
+      "A large modern rock carving at Mine Bay showing the ancestor Ngātoroirangi. It can only be reached by boat or kayak.",
+      "Steaming ground, hot streams and geothermal power stations around the town, all signs of the heat still below."
+    ],
+    basics: "Taupō town sits at the northern end of the lake, on the main road between Auckland and Wellington. Allow a day. The lake is cold for swimming outside summer. Scientists monitor the volcano constantly, and GeoNet publishes its current status.",
+    respect: "",
+    eras: [], related: ["q-maori"],
+    sources: [
+      ["Te Ara: Taupō volcano", "https://www.teara.govt.nz/en/node/12503"],
+      ["Te Ara: Lake Taupō (diagram of the lake bed)", "https://teara.govt.nz/en/diagram/8712/lake-taupo"],
+      ["GeoNet: volcano monitoring", "https://www.geonet.org.nz"]
+    ]
+  },
+  {
+    id: "place-abel-tasman", name: "Abel Tasman National Park", maori: "", kind: "nature", region: "Nelson and Tasman",
+    hook: "Golden beaches and clear water, beside the bay where Māori and Europeans first met.",
+    card: "Golden beaches and forest, beside the bay where Māori and Europeans first met in 1642.",
+    facts: [["Region", "Nelson and Tasman, top of the South Island"], ["Linked era", "Encounters and the Treaty"], ["Type", "Coastal national park"], ["Good to know", "The smallest national park in the country"]],
+    story: [
+      "Māori lived along this coast for at least 500 years, gathering food from the sea, the estuaries and the forest, and growing [[kūmara]] in sheltered spots.",
+      "On 18 December 1642 two Dutch ships under Abel Tasman anchored near Wainui, in the wide bay just north of the park that is now called Golden Bay or Mohua. The people living there were Ngāti Tūmatakōkiri. The first meeting between Māori and Europeans went badly. Four of Tasman’s crew were killed, and he sailed away without landing.",
+      "Ngāti Tūmatakōkiri were later displaced by other iwi. The iwi of the area today include Te Ātiawa, Ngāti Rārua and Ngāti Tama.",
+      "European settlers arrived from about 1855. They logged the forest, built ships, quarried granite and burned the hillsides for pasture. The easy timber was soon gone, and gorse and bracken took over the hills.",
+      "A public campaign to save what was left led to a national park. It opened in 1942, three hundred years after Tasman’s visit, and was named for him. Much of the forest you walk through today has grown back since then."
+    ],
+    seeList: [
+      "Golden sand beaches and clear, sheltered water, reached on foot, by kayak or by water taxi.",
+      "The Coast Track between Marahau and Tōtaranui, one of the country’s most popular walks. You can walk a short section in a day.",
+      "Tidal estuaries that empty and fill twice a day. Some crossings can only be made near low tide.",
+      "Fur seals on the rocks and islands offshore."
+    ],
+    basics: "Allow a day for a taste and three to five days to walk the whole Coast Track. Summer is busy and huts and campsites need to be booked ahead. Check the tide times before you set out. Dogs and fires are not allowed, and stream water should be boiled or treated before drinking. The Department of Conservation has current details.",
+    respect: "",
+    eras: ["era-encounters"], related: ["q-two-names"],
+    sources: [
+      ["Department of Conservation: Abel Tasman National Park history", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/history/"],
+      ["Department of Conservation: Abel Tasman area history (PDF)", "https://www.doc.govt.nz/globalassets/documents/conservation/historic/by-region/nelson-marlborough/abel-tasman-area-history-whole-document.pdf"],
+      ["Department of Conservation: Abel Tasman National Park", "https://doc.govt.nz/abeltasman"]
+    ]
+  },
+  {
+    id: "place-aoraki", name: "Aoraki / Mount Cook", maori: "", kind: "nature", region: "Canterbury",
+    hook: "The highest mountain in the country, and to Ngāi Tahu the most sacred of ancestors.",
+    card: "The highest mountain in the country, and the most sacred ancestor of Ngāi Tahu.",
+    facts: [["Region", "Canterbury, central South Island"], ["Type", "Mountains and glaciers"], ["Tangata whenua", "Ngāi Tahu"], ["Height", "3,724 metres"]],
+    story: [
+      "Aoraki / Mount Cook stands at the heart of the Southern Alps, in a national park with nineteen peaks over 3,000 metres.",
+      "To Ngāi Tahu, the [[iwi]] of most of the South Island, Aoraki is an ancestor. In their tradition Aoraki and his brothers were sons of Raki, the sky father. Their [[waka]] ran aground and tipped, and as they climbed to its high side they were turned to stone. The brothers became the highest peaks of the Southern Alps, and the canoe became the South Island, which has the old name Te Waka o Aoraki.",
+      "The English name was given in 1851, in honour of James Cook. In 1998, as part of the settlement of Ngāi Tahu’s Treaty claim, the mountain’s official name became Aoraki / Mount Cook, one of many South Island places to have their Māori names restored.",
+      "The mountain is a little shorter than it used to be. On 14 December 1991 a huge slab of rock and ice broke away from the summit. Careful measurement in 2013 put the height at 3,724 metres, about 40 metres lower than before.",
+      "Climbers first reached the top in 1894. They were three New Zealanders: Tom Fyfe, Jack Clarke and George Graham."
+    ],
+    seeList: [
+      "The mountain itself, on a clear day. It is often hidden in cloud, so allow more than one day if you can.",
+      "The Hooker Valley Track, a gentle walk of about three hours return to a glacier lake dotted with icebergs, with Aoraki directly ahead.",
+      "The Tasman Glacier, the longest in the country, and the milky blue lake at its foot.",
+      "The night sky. This is one of the darkest places in the country for seeing stars."
+    ],
+    basics: "The village is at the end of a long road beside Lake Pukaki, about four hours from Christchurch or Queenstown. There are no shops to speak of, so bring food. Weather changes fast and avalanches happen in any season. Dogs and drones are not allowed in the park. Check the Department of Conservation website for track conditions.",
+    respect: "Ngāi Tahu ask that nobody stands on the very top of Aoraki, which is the head of their ancestor. Climbers stop just short of the summit. The water that flows from the mountain is sacred too, so carry out all rubbish and waste.",
+    eras: [], related: ["q-two-names", "q-treaty"],
+    sources: [
+      ["Department of Conservation: History of Aoraki/Mount Cook", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/historic-aoraki-mount-cook/"],
+      ["University of Otago, School of Surveying: measuring Aoraki", "https://otago.ac.nz/surveying/potree/pub/mrc/projects/aoraki"],
+      ["Department of Conservation: Aoraki/Mount Cook National Park", "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/conditions/"]
+    ]
+  },
+  {
+    id: "place-fiordland", name: "Fiordland and Milford Sound", maori: "Piopiotahi", kind: "nature", region: "Southland",
+    hook: "Sheer rock walls rising from dark water, in the largest and wildest national park in the country.",
+    card: "Sheer rock walls and waterfalls in the country’s largest and wildest national park.",
+    facts: [["Region", "Southland, south-west South Island"], ["Type", "Fiords, mountains and rainforest"], ["Tangata whenua", "Ngāi Tahu"], ["Good to know", "Milford Sound is really a fiord, carved by ice"]],
+    story: [
+      "Fiordland is the south-west corner of the South Island: more than 1.2 million hectares of mountains, lakes and rainforest, with fourteen long fiords cutting in from the sea. It is the largest national park in the country and part of a World Heritage area.",
+      "In Ngāi Tahu tradition the fiords were carved from solid rock by Tū-te-raki-whānoa, working his way up the coast with an adze. Scientists describe the same shapes as the work of glaciers, which ground out deep valleys that the sea later flooded. That makes Milford a fiord. A sound, strictly, is a drowned river valley, but the name has stuck.",
+      "Few people ever lived here all year round. Māori came in season to gather food, travelling on well-worn trails, and to collect takiwai, a clear, pale kind of [[pounamu]] found near the mouth of the fiord. The Māori name, Piopiotahi, remembers the piopio, a native thrush that is now extinct.",
+      "James Cook spent five weeks in Dusky Sound, further south, in 1773. Sealers and whalers followed, and set up some of the first European camps in the country. Milford stayed almost unreachable until 1889, when Quintin McKinnon and Donald Sutherland opened the walking route that became the Milford Track. A road tunnel through the mountains finally linked it to the rest of the country in the 1950s.",
+      "Fiordland became a national park in 1952."
+    ],
+    seeList: [
+      "The fiord from the water. Boat trips run its full length to the open sea, past cliffs more than a kilometre high.",
+      "Mitre Peak, rising 1,692 metres straight from the water’s edge.",
+      "Waterfalls. After heavy rain, hundreds of temporary ones pour down the walls.",
+      "The road in from Te Anau, through beech forest and glacier-cut valleys. Many people find it as memorable as the fiord."
+    ],
+    basics: "Milford is about two hours’ drive from Te Anau and four from Queenstown, each way, on a mountain road that can close for snow or avalanche risk in winter. There is almost no accommodation or fuel at the fiord, so most people stay in Te Anau. It rains heavily and often here, and the fiord is at its most dramatic when it does. Bring a raincoat and insect repellent for the sandflies.",
+    respect: "",
+    eras: [], related: ["q-two-names"],
+    sources: [
+      ["Department of Conservation: History and culture of Fiordland National Park", "https://doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/about-fiordland-national-park/history-and-culture"],
+      ["Department of Conservation: Fiordland National Park", "https://www.doc.govt.nz/fiordland"],
+      ["UNESCO World Heritage Centre: Te Wāhipounamu, South West New Zealand", "https://whc.unesco.org/en/list/551"]
+    ]
+  }
+]);
+
+/* Every planned place now has a page. */
+window.ENZ.placesNext = [];
+
+/* The six places featured on the home page. */
+window.ENZ.featured = ["place-waitangi", "place-tongariro", "place-aoraki", "place-fiordland", "place-rotorua", "place-arrowtown"];
+
+/* Photos for the new places. */
+(function (E) {
+  var add = {
+    auckland: { src: "assets/auckland-cones.jpg", w: 1400, h: 1050, pos: "center 40%", name: "Maungawhau / Mount Eden, Auckland",
+      alt: "A deep grassy volcanic crater, with a city skyline and a tall tower beyond it.",
+      cap: "The crater of Maungawhau / Mount Eden, with central Auckland behind.",
+      by: "Photo by Artem Verbo on Unsplash", url: "https://unsplash.com/photos/PTdVqYSyQzQ" },
+    rotorua: { src: "assets/rotorua.jpg", w: 1000, h: 1347, tall: true, pos: "center 85%", name: "Geyser, Rotorua",
+      alt: "A jet of water and steam shooting up from a white cone of rock, with dark bush behind.",
+      cap: "A geyser erupting in the Rotorua geothermal area.",
+      by: "Photo by Hannah Wright on Unsplash, cropped", url: "https://unsplash.com/photos/white-powder-K_cReOJQotc" },
+    tongariro: { src: "assets/tongariro.jpg", w: 1100, h: 1375, tall: true, pos: "center 80%", name: "Emerald Lakes, Tongariro",
+      alt: "Bright green crater lakes in a bare, red-brown volcanic landscape, with steam rising beside them.",
+      cap: "The Emerald Lakes on the Tongariro Alpine Crossing.",
+      by: "Photo by Laura Smetsers on Unsplash", url: "https://unsplash.com/photos/blue-lagoon-cievKSNSmac" },
+    taupo: { src: "assets/taupo.jpg", w: 1300, h: 1212, pos: "center 70%", name: "Lake Taupō",
+      alt: "A wide blue lake with a small tree-covered point, and the snowy slopes of a large mountain in the haze beyond.",
+      cap: "Lake Taupō, with the snowy slopes of Ruapehu beyond.",
+      by: "Photo by Stephen Gong on Unsplash, cropped", url: "https://unsplash.com/photos/scenic-lake-with-distant-snowy-mountains-and-lakeside-houses-Z1SKwbJXo-0" },
+    abel: { src: "assets/abel-tasman.jpg", w: 1000, h: 1290, tall: true, pos: "center 25%", name: "Torrent Bay, Abel Tasman National Park",
+      alt: "A small rocky island topped with trees at sunset, reflected in rippled wet sand at low tide.",
+      cap: "Low tide at Torrent Bay in Abel Tasman National Park.",
+      by: "Photo by Alex Green on Unsplash, cropped", url: "https://unsplash.com/photos/OdEdGWr0EkM" },
+    arrowtown: { src: "assets/arrowtown.jpg", w: 1300, h: 1135, pos: "center 30%", name: "Gold panning, Arrowtown",
+      alt: "A pair of hands swirling water and gravel in a metal gold pan over a wooden trough.",
+      cap: "Panning for gold in Arrowtown.",
+      by: "Photo by Matt Seymour on Unsplash, cropped", url: "https://unsplash.com/photos/LoLfpxvzeco" },
+    aoraki: { src: "assets/aoraki.jpg", w: 1400, h: 933, name: "Aoraki / Mount Cook",
+      alt: "A snow-covered peak rising at the head of a valley, above a grey glacier lake edged with rocks.",
+      cap: "Aoraki / Mount Cook above Hooker Lake.",
+      by: "Photo by Jeanne Rouillard on Unsplash", url: "https://unsplash.com/photos/a-view-of-a-mountain-range-with-a-lake-in-the-foreground--rWDWXVkRSA" },
+    milford: { src: "assets/milford-sound.jpg", w: 1400, h: 774, name: "Milford Sound / Piopiotahi",
+      alt: "Steep, bush-covered rock walls rising from dark, calm water, with a small boat in the distance.",
+      cap: "Milford Sound / Piopiotahi. The boat in the distance gives the scale.",
+      by: "Photo by Owen Roth on Unsplash", url: "https://unsplash.com/photos/majestic-mountains-rise-from-a-calm-body-of-water-jZ7xa-Qm3Ak" }
+  };
+  var k;
+  for (k in add) { if (Object.prototype.hasOwnProperty.call(add, k)) E.images[k] = add[k]; }
+
+  var use = {
+    "place-auckland-cones": ["auckland"], "place-rotorua": ["rotorua"], "place-wellington": ["parliament"],
+    "place-arrowtown": ["arrowtown"], "place-tongariro": ["tongariro"], "place-taupo": ["taupo"],
+    "place-abel-tasman": ["abel"], "place-aoraki": ["aoraki"], "place-fiordland": ["milford"]
+  };
+  for (k in use) { if (Object.prototype.hasOwnProperty.call(use, k)) E.imageUse[k] = use[k]; }
+
+  /* Link the new places from the Start Here articles and the era page. */
+  function see(id, place) {
+    E.explainers.forEach(function (x) { if (x.id === id && x.see.indexOf(place) < 0) x.see.push(place); });
+  }
+  see("q-two-names", "place-aoraki");
+  see("q-maori", "place-rotorua");
+  see("q-treaty", "place-wellington");
+  see("q-people-today", "place-arrowtown");
+  see("q-government", "place-wellington");
+  see("q-holidays", "place-wellington");
+  if (E.eraPage.see.indexOf("place-abel-tasman") < 0) E.eraPage.see.push("place-abel-tasman");
+})(window.ENZ);
+</script>
+<script>
 (function () {
   var E = window.ENZ;
   var app = document.getElementById("app");
@@ -1151,6 +1460,11 @@ window.ENZ.imageUse = {
       '<div class="tl-row">' + segs + '</div><div class="tl-ticks" aria-hidden="true">' + ticks + "</div>" +
       '<p class="tl-cap">Drawn to scale: each band is as wide as its era was long. Māori had lived here for more than three centuries before the first European ship appeared in 1642.</p></div>';
   }
+  function featured() {
+    var ids = E.featured || [];
+    var list = ids.map(function (id) { var f = find(id); return f && f.type === "place" ? f.d : null; }).filter(Boolean);
+    return list.length ? list : PLACES.slice(0, 6);
+  }
   function placeCard(p) {
     var m = IMG[(USE[p.id] || [])[0]];
     var inner = '<div class="chips"><span class="chip ' + p.kind + '">' + (p.kind === "nature" ? "Nature" : "Heritage") + "</span></div><h3>" + p.name + "</h3><p>" + p.card + '</p><span class="meta">' + p.region + "</span>";
@@ -1188,8 +1502,8 @@ window.ENZ.imageUse = {
         '<section class="section"><div class="wrap"><span class="label">The Story</span><h2>About 750 years, in five eras</h2>' + timeline() +
         '<a class="more" href="#story">Read the story</a></div></section>' +
 
-        '<section class="section"><div class="wrap"><span class="label">Places</span><h2>Start in Northland, where much of the country’s founding story happened</h2>' +
-        '<div class="grid">' + PLACES.map(placeCard).join("") + '</div><a class="more" href="#places">All places</a></div></section>' +
+        '<section class="section"><div class="wrap"><span class="label">Places</span><h2>Places that tell the story</h2>' +
+        '<div class="grid">' + featured().map(placeCard).join("") + '</div><a class="more" href="#places">All ' + PLACES.length + " places</a></div></section>" +
 
         '<section class="section cta"><div class="wrap"><span class="label">Glossary</span><h2>Words you will hear</h2><dl class="gloss">' + sample + "</dl>" +
         '<a class="more" href="#glossary">Browse all ' + E.glossary.length + " words</a></div></section>";
@@ -1256,10 +1570,13 @@ window.ENZ.imageUse = {
 
     places: function () {
       return '<div class="page-head"><div class="wrap"><span class="label">Places</span><h1 tabindex="-1">Places that tell the story</h1>' +
-        '<p class="lead">Every place here is chosen for what it explains about the country, not only for how it looks. This first set covers Northland, where the Treaty was signed and the first war was fought.</p></div></div>' +
-        '<section class="section"><div class="wrap"><div class="grid">' + PLACES.map(placeCard).join("") + "</div></div></section>" +
-        '<section class="section"><div class="wrap"><h2>Coming next</h2><p class="lead">The rest of the country, one region at a time.</p><ul class="soon">' +
-        E.placesNext.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ul></div></section>";
+        '<p class="lead">Every place here is chosen for what it explains about the country, not only for how it looks. They run from the far north to the deep south.</p></div></div>' +
+        '<section class="section"><div class="wrap"><h2>Heritage places</h2><p class="lead">Where the country’s history happened, and can still be seen.</p><div class="grid">' +
+        PLACES.filter(function (p) { return p.kind !== "nature"; }).map(placeCard).join("") + "</div></div></section>" +
+        '<section class="section"><div class="wrap"><h2>Nature and landscapes</h2><p class="lead">Forests, volcanoes, coast and mountains, each with a story of its own.</p><div class="grid">' +
+        PLACES.filter(function (p) { return p.kind === "nature"; }).map(placeCard).join("") + "</div></div></section>" +
+        (E.placesNext.length ? '<section class="section"><div class="wrap"><h2>Coming next</h2><ul class="soon">' +
+        E.placesNext.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ul></div></section>" : "");
     },
 
     place: function (p) {
@@ -1271,7 +1588,7 @@ window.ENZ.imageUse = {
         '<h1 tabindex="-1">' + p.name + '</h1><p class="lead">' + p.hook + "</p></div></div>" +
         '<section class="section"><div class="wrap"><dl class="facts">' + p.facts.map(function (f) { return "<dt>" + f[0] + "</dt><dd>" + f[1] + "</dd>"; }).join("") + "</dl>" +
         shotsFor(p.id, 0, 1) + '<div class="prose"><h2>The story</h2>' + story + "<h2>What you will see</h2><ul>" + see + "</ul><h2>Visiting basics</h2><p>" + p.basics + "</p>" +
-        (p.respect ? '<h2>How to show respect</h2><p class="respect">' + p.respect + "</p>" : "") + "</div>" + shotsFor(p.id, 1) + wordsBox() +
+        (p.respect ? '<h2>How to show respect</h2><p class="respect">' + rich(p.respect) + "</p>" : "") + "</div>" + shotsFor(p.id, 1) + wordsBox() +
         '<div class="onward"><h2 class="label">Read the background</h2><div class="links">' + pills(p.related) + (p.eras.indexOf("era-encounters") >= 0 ? pills(["era-encounters"]) : '<a class="pill" href="#story">The Story</a>') + "</div></div>" +
         sources(p.sources) + "</div></section>";
       used = null;
